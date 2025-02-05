@@ -8,8 +8,8 @@
     <div class="container">
         <p class="c7"><span class="c2">The_Vigils_Keep</span></p>
         <p class="c5"><span class="c2"></span></p>
-        <p class="rosegoldframe" <img src="ROSE_GOLD_FRAME.png" class="rosegoldframe" width="500" height="500"> </p>
-        <p class="c7"> <a class="c0" href="https://thevigilskeep.github.io/life.enterprises.au/profile.html"> <img src="VIGIL_CREATURE_PFP_001.png" width="500" height="500"> </* Insert profile pic here */> </a> </p>
+        <p class="rose-gold-frame" <img src="ROSE_GOLD_FRAME.png" class="rosegoldframe" width="500" height="500"> </p>
+        <p class="c7"> <a class="c0" href="https://thevigilskeep.github.io/life.enterprises.au/profile.html"> <img src="VIGIL_CREATURE_PFP_001.png" class="original-image" width="500" height="500"> </* Insert profile pic here */> </a> </p>
         <p class="c5"><span class="c5"></span></p>
         <p class="c8"><span class="c3 c4"></span></p>
         <p class="c5"><span class="c3 c4"></span></p>
@@ -92,11 +92,29 @@
         width: 100%; /* Make elements fill the width of the container */
         box-sizing: border-box;
     }
+
+      .container {
+        position: relative;
+        width: 500px; /* Adjust based on your image size */
+        height: 500px; /* Adjust based on your image size */
+     }
+
+        .container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     
-     .rosegoldframe {
-        z-index: 1; /* Higher value to place it on top */
-        position: absolute;
-        top: -50px;
+        .rose-gold-frame {
+            z-index: 1; /* Higher value to place it on top */
+            top: -50px; /* Adjust this value to move the frame up */
+            left: 0;
+        }
+
+          .original-image {
+          z-index: 0; /* Lower value to place it below */
         }
 
     .c2, .c5, .c7, .c8, .c3, .c6, .c4, .c0, .title, .subtitle, li, p, h1, h2, h3, h4, h5, h6 {
