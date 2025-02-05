@@ -101,6 +101,18 @@
         a {
             font-size: 16pt;
         }
+
+       .art-frame {
+            position: absolute;
+            top: 10%; /* Adjust this value to move the frame vertically */
+            left: 10%; /* Adjust this value to move the frame horizontally */
+            z-index: 2; /* Ensure it appears on top */
+        }
+
+        .profile-image {
+            z-index: 1; /* Ensure it appears below the art frame */
+        }
+        
     </style>
 </head>
 <body class="c1 doc-content">
@@ -111,8 +123,9 @@
     <div class="container item">
         <p>
             <a href="https://thevigilskeep.github.io/life.enterprises.au/profile.html">
-                <img src="VIGIL_CREATURE_PFP_001.png" width="500px" height="480px"/>
+                <img src="VIGIL_CREATURE_PFP_001.png" width="500px" height="480px" class="profile-image"/> <!-- Adjust the size and position as needed -->
             </a>
+            <img src="ART_FRAME.png" width="500px" height="480px" class="art-frame"/> <!-- Adjust the size and position as needed -->
         </p>
     </div>
 
