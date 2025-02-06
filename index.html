@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -16,6 +17,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            overflow: hidden; /* Prevent scrolling outside background image */
         }
 
         .header {
@@ -34,7 +36,7 @@
         }
 
         .item {
-            margin: 15px;
+            margin: 15px; /* Default margin, you can adjust this manually */
         }
 
         .title {
@@ -99,17 +101,38 @@
         }
 
         .art-frame {
-            position: relative;
-            top: 8.5%;
-            z-index: 0;
+            position: absolute;
+            top: 8.5%; /* Adjust this value to move the frame vertically */
+            left: 39%; /* Adjust this value to move the frame horizontally */
+            z-index: 0; /* Ensure it appears on top */
         }
 
         .profile-image {
-            z-index: 1;
+            z-index: 1; /* Ensure it appears below the art frame */
         }
 
-        .gallery, .character-creation, .information-bank, .mini-games {
-            position: relative;
+        .gallery {
+            position: absolute;
+            top: 45%; /* Adjust this value to move the contact me button vertically */
+            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        }
+        
+        .character-creation {
+            position: absolute;
+            top: 60.5%; /* Adjust this value to move the music library button vertically */
+            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        }
+
+        .information-bank {
+            position: absolute;
+            top: 72%; /* Adjust this value to move the cinematic art museum button vertically */
+            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        }
+
+        .mini-games {
+            position: absolute;
+            top: 83.3%; /* Adjust this value to move the boutique button vertically */
+            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
         }
 
         .social-links {
@@ -178,8 +201,8 @@
     <div class="container item">
         <p>
             <a href="https://thevigilskeep.github.io/life.enterprises.au/profile.html">
-                <img src="VIGIL_CREATURE_PFP_001.png" class="profile-image"/>
-                <img src="ROSE_GOLD_FRAME.png" class="art-frame"/>
+                <img src="VIGIL_CREATURE_PFP_001.png" width="500px" height="480px" class="profile-image"/> <!-- Adjust the size and position as needed -->
+                <img src="ROSE_GOLD_FRAME.png" width="420px" height="450px" class="art-frame"/> <!-- Adjust the size and position as needed -->
             </a>
         </p>
     </div>
@@ -217,15 +240,27 @@
     </div>
 
     <div class="social-links">
-        <a href="https://outlook.com" target="_blank">Outlook</a>
-        <a href="https://wa.me" target="_blank">WhatsApp Business</a>
-        <a href="https://instagram.com" target="_blank">Instagram</a>
-        <a href="https://youtube.com" target="_blank">YouTube</a>
-        <a href="https://discord.com" target="_blank">Discord</a>
-        <a href="https://threads.com" target="_blank">Threads</a>
-        <a href="https://tumblr.com" target="_blank">Tumblr</a>
-        <a href="https://soundcloud.com" target="_blank">SoundCloud</a>
+        <a href="https://www.youtube.com/@The_Vigil_Creature" target="_blank">
+            <img src="path_to_your_image.jpg"/>
+        </a>
+        <a href="https://www.instagram.com/the_vigils_keep/" target="_blank">
+            <img src="path_to_your_image.jpg"/>
+        </a>
+        <a href="https://www.youtube.com/@The_Vigil_Creature" target="_blank">
+            <img src="path_to_your_image.jpg"/>
+        </a>
+        <a href="https://discord.gg/dA6KQErGMX" target="_blank">
+            <img src="path_to_your_image.jpg"/>
+        </a>
+        <a href="https://www.threads.net/@the_vigils_keep" target="_blank">
+            <img src="path_to_your_image.jpg"/>
+        </a>
+        <a href="https://www.tumblr.com/blog/the-vigils-keep" target="_blank">
+            <img src="path_to_your_image.jpg"/>
+        </a>
+        <a href="https://soundcloud.com/user-942326157" target="_blank">
+            <img src="path_to_your_image.jpg"/>
+        </a>
     </div>
-    
 </body>
 </html>
