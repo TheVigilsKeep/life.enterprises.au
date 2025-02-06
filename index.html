@@ -2,32 +2,26 @@
 <html>
 <head>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
-    <meta name="viewport" content="width=1920, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAIN_MENU</title>
     <style>
-
         body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: auto; /* Maintains the aspect ratio */
-            height: 1800px;
-            width: 1920px;
             background-image: url('Untitled18_20250205005000.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
         }
 
         .header {
             width: 100%;
             text-align: center;
             padding: 20px;
-            position: relative;
-            top: -05px;
         }
 
         .container {
@@ -40,7 +34,7 @@
         }
 
         .item {
-            margin: 20px; /* Default margin, you can adjust this manually */
+            margin: 15px;
         }
 
         .title {
@@ -105,41 +99,34 @@
         }
 
         .art-frame {
-            position: absolute;
-            top: 8.5%; /* Adjust this value to move the frame vertically */
-            left: 39%; /* Adjust this value to move the frame horizontally */
-            z-index: 0; /* Ensure it appears on top */
+            position: relative;
+            top: 8.5%;
+            z-index: 0;
         }
 
         .profile-image {
-            z-index: 1; /* Ensure it appears below the art frame */
+            z-index: 1;
         }
 
-        .gallery {
-            position: absolute;
-            top: 45%; /* Adjust this value to move the contact me button vertically */
-            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
-        }
-        
-        .character-creation {
-            position: absolute;
-            top: 60.5%; /* Adjust this value to move the music library button vertically */
-            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        .gallery, .character-creation, .information-bank, .mini-games {
+            position: relative;
         }
 
-        .information-bank {
-            position: absolute;
-            top: 72%; /* Adjust this value to move the cinematic art museum button vertically */
-            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
 
-        .mini-games {
-            position: absolute;
-            top: 83.3%; /* Adjust this value to move the boutique button vertically */
-            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        .social-links a {
+            margin: 10px;
+            text-decoration: none;
+            color: black;
+            font-family: "Arial";
         }
-        
-        @media (max-width: 1920px) {
+
+        @media (max-width: 768px) {
             .title {
                 font-size: 24pt;
             }
@@ -148,6 +135,39 @@
                 font-size: 18pt;
             }
 
+            h1 {
+                font-size: 18pt;
+            }
+
+            h2 {
+                font-size: 16pt;
+            }
+
+            h3 {
+                font-size: 14pt;
+            }
+
+            h4 {
+                font-size: 12pt;
+            }
+
+            h5 {
+                font-size: 10pt;
+            }
+
+            h6 {
+                font-size: 8pt;
+            }
+
+            .profile-image, .art-frame {
+                width: 100%;
+                height: auto;
+            }
+
+            .social-links a {
+                margin: 5px;
+            }
+        }
     </style>
 </head>
 <body class="c1 doc-content">
@@ -158,16 +178,16 @@
     <div class="container item">
         <p>
             <a href="https://thevigilskeep.github.io/life.enterprises.au/profile.html">
-                <img src="VIGIL_CREATURE_PFP_001.png" width="500px" height="480px" class="profile-image"/> <!-- Adjust the size and position as needed -->
-            
-            <img src="ROSE_GOLD_FRAME.png" width="420px" height="450px" class="art-frame"/> <!-- Adjust the size and position as needed -->
-        </p> </a>
+                <img src="VIGIL_CREATURE_PFP_001.png" class="profile-image"/>
+                <img src="ROSE_GOLD_FRAME.png" class="art-frame"/>
+            </a>
+        </p>
     </div>
 
     <div class="container item gallery">
         <p>
             <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277709487%26usg%3DAOvVaw0x[...]">
-                <img src="path_to_your_image.jpg"/> </* Insert gallery button here */>
+                <img src="path_to_your_image.jpg"/> <!-- Insert gallery button here -->
             </a>
         </p>
     </div>
@@ -175,7 +195,7 @@
     <div class="container item character-creation">
         <p>
             <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277709856%26usg%3DAOvVaw3e[...]">
-                <img src="path_to_your_image.jpg"/> </* Insert music library button here */>
+                <img src="path_to_your_image.jpg"/> <!-- Insert character creation button here -->
             </a>
         </p>
     </div>
@@ -183,7 +203,7 @@
     <div class="container item information-bank">
         <p>
             <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277710211%26usg%3DAOvVaw2M[...]">
-                <img src="path_to_your_image.jpg"/> </* Insert cinematic art museum button here */>
+                <img src="path_to_your_image.jpg"/> <!-- Insert information bank button here -->
             </a>
         </p>
     </div>
@@ -191,33 +211,20 @@
     <div class="container item mini-games">
         <p>
             <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277710601%26usg%3DAOvVaw3x[...]">
-                <img src="path_to_your_image.jpg"/> </* Insert boutique button here */>
+                <img src="path_to_your_image.jpg"/> <!-- Insert mini-games button here -->
             </a>
         </p>
     </div>
 
-        <div class="social-links">
-
-        <a href="https://www.youtube.com/@The_Vigil_Creature" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
-            
-        <a href="https://www.instagram.com/the_vigils_keep/" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
-            
-        <a href="https://www.youtube.com/@The_Vigil_Creature" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
-
-        <a href="https://discord.gg/dA6KQErGMX" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
-            
-        <a href="https://www.threads.net/@the_vigils_keep" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
-
-        <a href="https://www.tumblr.com/blog/the-vigils-keep" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
-            
-        <a href="https://soundcloud.com/user-942326157" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
+    <div class="social-links">
+        <a href="https://outlook.com" target="_blank">Outlook</a>
+        <a href="https://wa.me" target="_blank">WhatsApp Business</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+        <a href="https://discord.com" target="_blank">Discord</a>
+        <a href="https://threads.com" target="_blank">Threads</a>
+        <a href="https://tumblr.com" target="_blank">Tumblr</a>
+        <a href="https://soundcloud.com" target="_blank">SoundCloud</a>
     </div>
     
 </body>
