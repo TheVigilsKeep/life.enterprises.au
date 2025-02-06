@@ -185,16 +185,17 @@
         </p>
     </div>
 
+    <!-- Background music -->
+    <audio id="background-music" autoplay loop>
+        <source src="Upstairs.m4a" type="audio/m4a">
+        Your browser does not support the audio element.
+    </audio>
+    
     <script>
-        // Create a new audio element
-        var audio = new Audio('Upstairs.m4a');
-        audio.loop = true;  // Set the audio to loop
-        audio.volume = 0.5; // Set the volume (0.0 to 1.0)
-
-        // Play the audio
-        audio.play().catch(function(error) {
-            console.log('Error playing audio:', error);
-        });
+        window.onload = function() {
+            var audio = document.getElementById('background-music');
+            audio.volume = 0.5; // Set volume here (0.0 to 1.0)
+        };
     </script>
     
 </body>
