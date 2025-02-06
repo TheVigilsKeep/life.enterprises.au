@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAIN_MENU</title>
     <style>
+
+        @media (max-width: 1800px), (max-height: 800px), (overflow-x: hidden; /* Prevent scrolling outside background image */) {
+        
         body, html {
             padding: 5em 8%; /* Corrected padding syntax */
             max-width: 100%; /* Added missing semicolon */
@@ -112,7 +115,8 @@
 
         .profile-image {
             z-index: 1; /* Ensure it appears below the art frame */
-                        aspect-ratio: 16 / 9;
+            aspect-ratio: 16 / 9;
+            
         }
 
         .gallery {
@@ -138,8 +142,6 @@
             top: 83.3%; /* Adjust this value to move the boutique button vertically */
             left: 0.1%; /* Adjust this value to move the contact me button horizontally */
         }
-
-        @media (max-width: 1800px), (max-height: 800px), (overflow-x: hidden; /* Prevent scrolling outside background image */) {
         
     </style>
 </head>
