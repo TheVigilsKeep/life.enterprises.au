@@ -102,7 +102,7 @@
             font-size: 16pt;
         }
 
-       .art-frame {
+        .art-frame {
             position: absolute;
             top: 8.5%; /* Adjust this value to move the frame vertically */
             left: 39%; /* Adjust this value to move the frame horizontally */
@@ -113,13 +113,13 @@
             z-index: 1; /* Ensure it appears below the art frame */
         }
 
-                .contact-me {
+        .contact-me {
             position: absolute;
             top: 45%; /* Adjust this value to move the contact me button vertically */
             left: 0.1%; /* Adjust this value to move the contact me button horizontally */
         }
         
-                .music-library {
+        .music-library {
             position: absolute;
             top: 60.5%; /* Adjust this value to move the music library button vertically */
             left: 0.1%; /* Adjust this value to move the contact me button horizontally */
@@ -188,8 +188,9 @@
     <!-- Background music -->
     <audio id="background-music" autoplay loop>
         <source src="Upstairs.m4a" type="audio/m4a">
+        Your browser does not support the audio element.
     </audio>
-    
+
     <script>
         window.onload = function() {
             var audio = document.getElementById('background-music');
