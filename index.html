@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAIN_MENU</title>
     <style>
- 
+
         body, html {
             margin: 0;
             padding: 0;
+            height: auto;
+            max-width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 2600px;
-            width: 1500px;
+            height: 1800px;
+            width: 1920px;
             background-image: url('Untitled18_20250205005000.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
-            overflow-y: hidden;
+            overflow: hidden; /* Prevent scrolling outside background image */
         }
 
         .header {
@@ -105,8 +107,6 @@
         }
 
         .art-frame {
-            height: auto;
-            max-width: 100%;
             position: absolute;
             top: 8.5%; /* Adjust this value to move the frame vertically */
             left: 39%; /* Adjust this value to move the frame horizontally */
@@ -160,9 +160,9 @@
     <div class="container item">
         <p>
             <a href="https://thevigilskeep.github.io/life.enterprises.au/profile.html">
-                <img src="VIGIL_CREATURE_PFP_001.png" width="300px" height="280px" class="profile-image"/> <!-- Adjust the size and position as needed -->
+                <img src="VIGIL_CREATURE_PFP_001.png" width="500px" height="480px" class="profile-image"/> <!-- Adjust the size and position as needed -->
             
-            <img src="ROSE_GOLD_FRAME.png" width="220px" height="250px" class="art-frame"/> <!-- Adjust the size and position as needed -->
+            <img src="ROSE_GOLD_FRAME.png" width="420px" height="450px" class="art-frame"/> <!-- Adjust the size and position as needed -->
         </p> </a>
     </div>
 
