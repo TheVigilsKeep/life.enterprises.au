@@ -12,13 +12,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 1200px;
+            height: 1800px;
             width: 1920px;
             background-image: url('Untitled18_20250205005000.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
+            overflow: hidden; /* Prevent scrolling outside background image */
         }
 
         .header {
@@ -39,7 +40,7 @@
         }
 
         .item {
-            margin: 15px; /* Default margin, you can adjust this manually */
+            margin: 20px; /* Default margin, you can adjust this manually */
         }
 
         .title {
@@ -138,6 +139,15 @@
             left: 0.1%; /* Adjust this value to move the contact me button horizontally */
         }
         
+        @media (max-width: 1920px) {
+            .title {
+                font-size: 24pt;
+            }
+
+            .subtitle {
+                font-size: 18pt;
+            }
+
     </style>
 </head>
 <body class="c1 doc-content">
