@@ -17,6 +17,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            overflow: hidden; /* Prevent scrolling outside background image */
         }
 
         .header {
@@ -107,9 +108,6 @@
         }
 
         .profile-image {
-            position: absolute;
-            top: 0px; /* Adjust this value to move the frame vertically */
-            left: 8%; /* Adjust this value to move the frame horizontally */
             z-index: 1; /* Ensure it appears below the art frame */
         }
 
@@ -151,10 +149,10 @@
             font-family: "Arial";
         }
 
-        @media (max-width: 1900px) {
+        @media (max-width: 1920px), (max-height: 1080px) {
             body, html {
                 padding: 5em 8%; /* Corrected padding syntax */
-                max-width: 100vh; /* Added missing semicolon */
+                max-width: 100%; /* Added missing semicolon */
                 height: auto;
                 aspect-ratio: 16 / 9;
                 display: flex;
@@ -166,8 +164,6 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 position: relative;
-                overflow: hidden; /* Prevent scrolling outside background image */
-                max-height: 100vh; /* Set max height to 100% of the viewport height */
             }
 
             .title {
@@ -221,9 +217,9 @@
     <div class="container item">
         <p>
             <a href="https://thevigilskeep.github.io/life.enterprises.au/profile.html">
-                <img src="VIGIL_CREATURE_PFP_001.png" width="300px" height="280px" class="profile-image"/> <!-- Adjust the size and position as needed -->
+                <img src="VIGIL_CREATURE_PFP_001.png" width="500px" height="480px" class="profile-image"/> <!-- Adjust the size and position as needed -->
             
-            <img src="ROSE_GOLD_FRAME.png" width="220px" height="250px" class="art-frame"/> <!-- Adjust the size and position as needed -->
+            <img src="ROSE_GOLD_FRAME.png" width="420px" height="450px" class="art-frame"/> <!-- Adjust the size and position as needed -->
         </p> </a>
     </div>
 
