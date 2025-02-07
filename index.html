@@ -149,10 +149,11 @@
             font-family: "Arial";
         }
 
-        @media (max-width: 1920px), (max-height: 1080px) {
+        @media (max-width: 1920px) {
             body, html {
                 padding: 5em 8%; /* Corrected padding syntax */
-                max-width: 100%; /* Added missing semicolon */
+                max-width: 100vh; /* Added missing semicolon */
+                max-height: 100vh;
                 height: auto;
                 aspect-ratio: 16 / 9;
                 display: flex;
