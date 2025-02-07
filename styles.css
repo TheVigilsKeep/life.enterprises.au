@@ -143,7 +143,7 @@
         }
         
             .profile-image {
-        width: 300px; /* Adjust this value to resize the profile image */
+        width: 260px; /* Adjust this value to resize the profile image */
         height: auto; /* Maintain aspect ratio */
         max-width: 100%; /* Ensure it fits within the screen */
     }
