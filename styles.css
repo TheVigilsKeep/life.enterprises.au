@@ -132,7 +132,7 @@
             left: 0.1%; /* Adjust this value to move the contact me button horizontally */
         }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 800px) {
 
             html,body {
                 width:100%;
