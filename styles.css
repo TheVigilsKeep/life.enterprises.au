@@ -141,15 +141,9 @@
                 padding:0;
                 overflow: hidden;
         }
-
-           .art-frame {
-        width: 200px; /* Adjust this value to resize the profile image */
-        height: auto; /* Maintain aspect ratio */
-        max-width: 100%; /* Ensure it fits within the screen */
-           }
         
             .profile-image {
-        width: 200px; /* Adjust this value to resize the profile image */
+        width: 400px; /* Adjust this value to resize the profile image */
         height: auto; /* Maintain aspect ratio */
         max-width: 100%; /* Ensure it fits within the screen */
     }
