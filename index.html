@@ -149,62 +149,64 @@
             font-family: "Arial";
         }
 
-@media (max-width: 900px) {
-    body, html {
-        padding: 0; /* Corrected padding syntax */
-        width: 100vw; /* Set max-width to viewport width */
-        height: 100vh; /* Set max-height to viewport height */ /* Ensure it fills the viewport height */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-image: url('Untitled18_20250205005000.jpg');
-        background-size: cover; /* Ensure the background image covers the entire viewport */
-        background-position: center;
-        background-repeat: no-repeat;
-        overflow: hidden; /* Prevent scrolling outside background image */
-    }
+        @media (max-width: 1920px), (max-height: 1080px) {
+            body, html {
+                padding: 5em 8%; /* Corrected padding syntax */
+                max-width: 100%; /* Added missing semicolon */
+                height: auto;
+                aspect-ratio: 16 / 9;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 1080px;
+                width: 1920px;
+                background-image: url('Untitled18_20250205005000.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                position: relative;
+            }
 
-    .title {
-        font-size: 24pt;
-    }
+            .title {
+                font-size: 24pt;
+            }
 
-    .subtitle {
-        font-size: 18pt;
-    }
+            .subtitle {
+                font-size: 18pt;
+            }
 
-    h1 {
-        font-size: 18pt;
-    }
+            h1 {
+                font-size: 18pt;
+            }
 
-    h2 {
-        font-size: 16pt;
-    }
+            h2 {
+                font-size: 16pt;
+            }
 
-    h3 {
-        font-size: 14pt;
-    }
+            h3 {
+                font-size: 14pt;
+            }
 
-    h4 {
-        font-size: 12pt;
-    }
+            h4 {
+                font-size: 12pt;
+            }
 
-    h5 {
-        font-size: 10pt;
-    }
+            h5 {
+                font-size: 10pt;
+            }
 
-    h6 {
-        font-size: 8pt;
-    }
+            h6 {
+                font-size: 8pt;
+            }
 
-    .profile-image, .art-frame {
-        width: 100%;
-        height: auto;
-    }
+            .profile-image, .art-frame {
+                width: 100%;
+                height: auto;
+            }
 
-    .social-links a {
-        margin: 5px;
-    }
-}
+            .social-links a {
+                margin: 5px;
+            }
+        }
     </style>
 </head>
 <body class="c1 doc-content">
@@ -216,15 +218,15 @@
         <p>
             <a href="https://thevigilskeep.github.io/life.enterprises.au/profile.html">
                 <img src="VIGIL_CREATURE_PFP_001.png" width="500px" height="480px" class="profile-image"/> <!-- Adjust the size and position as needed -->
-                <img src="ROSE_GOLD_FRAME.png" width="420px" height="450px" class="art-frame"/> <!-- Adjust the size and position as needed -->
-            </a>
-        </p>
+            
+            <img src="ROSE_GOLD_FRAME.png" width="420px" height="450px" class="art-frame"/> <!-- Adjust the size and position as needed -->
+        </p> </a>
     </div>
 
     <div class="container item gallery">
         <p>
             <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277709487%26usg%3DAOvVaw0x[...]">
-                <img src="path_to_your_image.jpg"/> <!-- Insert gallery button here -->
+                <img src="path_to_your_image.jpg"/> </* Insert gallery button here */>
             </a>
         </p>
     </div>
@@ -232,7 +234,7 @@
     <div class="container item character-creation">
         <p>
             <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277709856%26usg%3DAOvVaw3e[...]">
-                <img src="path_to_your_image.jpg"/> <!-- Insert character creation button here -->
+                <img src="path_to_your_image.jpg"/> </* Insert music library button here */>
             </a>
         </p>
     </div>
@@ -240,7 +242,7 @@
     <div class="container item information-bank">
         <p>
             <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277710211%26usg%3DAOvVaw2M[...]">
-                <img src="path_to_your_image.jpg"/> <!-- Insert information bank button here -->
+                <img src="path_to_your_image.jpg"/> </* Insert cinematic art museum button here */>
             </a>
         </p>
     </div>
@@ -248,33 +250,34 @@
     <div class="container item mini-games">
         <p>
             <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277710601%26usg%3DAOvVaw3x[...]">
-                <img src="path_to_your_image.jpg"/> <!-- Insert mini-games button here -->
+                <img src="path_to_your_image.jpg"/> </* Insert boutique button here */>
             </a>
         </p>
     </div>
 
-    <div class="social-links">
+        <div class="social-links">
+
         <a href="https://www.youtube.com/@The_Vigil_Creature" target="_blank">
-            <img src="path_to_your_image.jpg"/>
-        </a>
+                <img src="path_to_your_image.jpg"/> </a>
+            
         <a href="https://www.instagram.com/the_vigils_keep/" target="_blank">
-            <img src="path_to_your_image.jpg"/>
-        </a>
+                <img src="path_to_your_image.jpg"/> </a>
+            
         <a href="https://www.youtube.com/@The_Vigil_Creature" target="_blank">
-            <img src="path_to_your_image.jpg"/>
-        </a>
+                <img src="path_to_your_image.jpg"/> </a>
+
         <a href="https://discord.gg/dA6KQErGMX" target="_blank">
-            <img src="path_to_your_image.jpg"/>
-        </a>
+                <img src="path_to_your_image.jpg"/> </a>
+            
         <a href="https://www.threads.net/@the_vigils_keep" target="_blank">
-            <img src="path_to_your_image.jpg"/>
-        </a>
+                <img src="path_to_your_image.jpg"/> </a>
+
         <a href="https://www.tumblr.com/blog/the-vigils-keep" target="_blank">
-            <img src="path_to_your_image.jpg"/>
-        </a>
+                <img src="path_to_your_image.jpg"/> </a>
+            
         <a href="https://soundcloud.com/user-942326157" target="_blank">
-            <img src="path_to_your_image.jpg"/>
-        </a>
+                <img src="path_to_your_image.jpg"/> </a>
     </div>
+    
 </body>
 </html>
