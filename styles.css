@@ -135,9 +135,18 @@
 @media only screen and (max-width: 800px) {
 
             html,body {
-                width:100%;
-                height:100%;
-                margin:0;
-                padding:0;
-                overflow: hidden;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 1830px;
+            width: 1920px;
+            background-image: url('Untitled18_20250205005000.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
