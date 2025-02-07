@@ -1,4 +1,4 @@
-        body, html {
+body, html {
             margin: 0;
             padding: 0;
             height: 100%;
@@ -149,4 +149,121 @@
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
+        }
+
+        .header {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            top: -05px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .item {
+            margin: 15px; /* Default margin, you can adjust this manually */
+        }
+
+        .title {
+            font-size: 36pt;
+            font-family: "Arial";
+            padding-bottom: 6pt;
+        }
+
+        .subtitle {
+            padding-top: 18pt;
+            padding-bottom: 4pt;
+            font-size: 24pt;
+            font-family: "Georgia";
+            color: #666666;
+            font-style: italic;
+        }
+
+        li, p {
+            margin: 0;
+            font-size: 11pt;
+            font-family: "Arial";
+        }
+
+        h1 {
+            font-size: 24pt;
+            padding-bottom: 12pt;
+            font-family: "Arial";
+        }
+
+        h2 {
+            font-size: 18pt;
+            padding-bottom: 11.2pt;
+            font-family: "Arial";
+        }
+
+        h3 {
+            font-size: 14pt;
+            padding-bottom: 12pt;
+            font-family: "Arial";
+        }
+
+        h4 {
+            font-size: 12pt;
+            padding-bottom: 12.8pt;
+            font-family: "Arial";
+        }
+
+        h5 {
+            font-size: 9pt;
+            padding-bottom: 12.8pt;
+            font-family: "Arial";
+        }
+
+        h6 {
+            font-size: 8pt;
+            padding-bottom: 18pt;
+            font-family: "Arial";
+        }
+
+        a {
+            font-size: 16pt;
+        }
+
+        .art-frame {
+            position: absolute;
+            top: 8.5%; /* Adjust this value to move the frame vertically */
+            left: 39%; /* Adjust this value to move the frame horizontally */
+            z-index: 0; /* Ensure it appears on top */
+        }
+
+        .profile-image {
+            z-index: 1; /* Ensure it appears below the art frame */
+        }
+
+        .gallery {
+            position: absolute;
+            top: 45%; /* Adjust this value to move the contact me button vertically */
+            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        }
+        
+        .character-creation {
+            position: absolute;
+            top: 60.5%; /* Adjust this value to move the music library button vertically */
+            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        }
+
+        .information-bank {
+            position: absolute;
+            top: 72%; /* Adjust this value to move the cinematic art museum button vertically */
+            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        }
+
+        .mini-games {
+            position: absolute;
+            top: 83.3%; /* Adjust this value to move the boutique button vertically */
+            left: 0.1%; /* Adjust this value to move the contact me button horizontally */
         }
