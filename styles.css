@@ -238,8 +238,8 @@ body, html {
             top: 8.5%; /* Adjust this value to move the frame vertically */
             left: 39%; /* Adjust this value to move the frame horizontally */
             z-index: 0; /* Ensure it appears on top */
-            height: 500px;
-            width: 400px;
+            height: 100%;
+            width: 100%;
         }
 
         .profile-image {
