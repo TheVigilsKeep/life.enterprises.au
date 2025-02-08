@@ -132,7 +132,7 @@
             left: 0.1%; /* Adjust this value to move the contact me button horizontally */
         }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 450px) { /*pixel 3,XL and 4 versions */
 
           html,body {
                 width:100%;
@@ -147,17 +147,19 @@
         height: auto; /* Maintain aspect ratio */
         max-width: 100%; /* Ensure it fits within the screen */
         position: absolute; /* Positioning within the parent */
-        top: 0%; /* Center vertically */
+        top: 3%; /* Center vertically */
         left: 50%; /* Center horizontally */
-        transform: translate(-50%, 78%); /* Centering adjustments */
+        align-items: center;
+        transform: translate(-50%, 36%); /* Centering adjustments */
     }
 
     .art-frame {
         width: 210px; /* Adjust this value to resize the art frame */
         height: auto; /* Maintain aspect ratio */
-        top: 25%; /* Move up by 25% */
+        top: 23%; /* Move up by 25% */
         left: 50%; /* Center horizontally */
-        transform: translate(-50%, -25%); /* Center horizontally and move up */
+        transform: translate(-50%, -49%); /* Center horizontally and move up */
+        align-items: center;
     }
     
     .social-links {
@@ -165,14 +167,14 @@
         flex-direction: row;
         align-items: center;
         position: absolute;
-        bottom: 50%; /* Adjust this value to position the social links vertically */
-        left: 83%;
-        transform: translate(-50%, -25%);
+        bottom: 54%; /* Adjust this value to position the social links vertically */
+        left: 70%;
+        transform: translate(-50%, -99%);
         width: 100%; /* Ensure it fits within the screen */
     }
 
     .social-links a {
-        margin: 1px 0; /* Adjust this value for spacing between the links */
+        margin: 0px 0; /* Adjust this value for spacing between the links */
         width: 40px; /* Adjust this value to resize the social icons */
         height: 40px; /* Maintain aspect ratio */
     }
