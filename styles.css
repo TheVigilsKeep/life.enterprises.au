@@ -132,7 +132,22 @@
             left: 0.1%; /* Adjust this value to move the contact me button horizontally */
         }
 
-@media only screen and (max-width: 450px) { /*pixel 7, 8 versions */
+@media (max-width: 767px) { /* Adjust breakpoint as needed */
+  /* Styles specifically for mobile devices */ 
+  /* Example: smaller font sizes, simpler layouts */
+}
+
+@media (min-width: 768px) and (max-width: 991px) { /* Adjust breakpoints as needed */
+  /* Styles for tablet devices */ 
+  /* Example: slightly larger font sizes, two-column layouts */
+}
+
+@media (min-width: 992px) { /* Adjust breakpoint as needed */
+  /* Styles for desktop devices */ 
+  /* Example: full-width layouts, larger images */
+}
+
+@media only screen and (max-width: 600px) { /*phone versions */
 
           html,body {
                 width:100%;
@@ -183,8 +198,4 @@
         width: 100%;
         height: auto; /* Maintain aspect ratio */
     }
-}
-
-@media only screen and (max-width: 320px) {
-    /* Add your styles here for devices up to 320px */
 }
