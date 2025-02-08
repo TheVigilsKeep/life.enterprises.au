@@ -147,4 +147,11 @@
         height: auto; /* Maintain aspect ratio */
         max-width: 100%; /* Ensure it fits within the screen */
     }
+
+    .art-frame {
+        width: 210px; /* Adjust this value to resize the art frame */
+        height: auto; /* Maintain aspect ratio */
+        top: 10%; /* Adjust this value to move the frame vertically */
+        left: 35%; /* Adjust this value to move the frame horizontally */
+    }
 }
