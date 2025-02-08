@@ -151,14 +151,8 @@
     .art-frame {
         width: 210px; /* Adjust this value to resize the art frame */
         height: auto; /* Maintain aspect ratio */
-        top: 20%; /* Adjust this value to move the frame vertically */
-        left: 50%; /* Adjust this value to move the frame horizontally */
-        transform: translateX(-50%); /* Center horizontally */
+        top: 25%; /* Move up by 25% */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -25%); /* Center horizontally and move up */
     }
-
-      .title {
-        width: 210px; /* Adjust this value to resize the profile image */
-        height: auto; /* Maintain aspect ratio */
-        max-width: 100%; /* Ensure it fits within the screen */
-        }
 }
