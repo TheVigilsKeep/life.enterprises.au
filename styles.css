@@ -151,7 +151,7 @@
     .art-frame {
         width: 210px; /* Adjust this value to resize the art frame */
         height: auto; /* Maintain aspect ratio */
-        top: 30%; /* Adjust this value to move the frame vertically */
+        top: 50%; /* Adjust this value to move the frame vertically */
         left: 50%; /* Adjust this value to move the frame horizontally */
         transform: translateX(-50%); /* Center horizontally */
     }
