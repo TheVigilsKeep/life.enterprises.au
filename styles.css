@@ -149,7 +149,7 @@
         position: absolute; /* Positioning within the parent */
         top: 50%; /* Center vertically */
         left: 50%; /* Center horizontally */
-        transform: translate(-50%, -50%); /* Centering adjustments */
+        transform: translate(-50%, -70%); /* Centering adjustments */
     }
 
     .art-frame {
