@@ -153,7 +153,7 @@
         height: auto; /* Maintain aspect ratio */
         top: 20%; /* Adjust this value to move the frame vertically */
         left: 50%; /* Adjust this value to move the frame horizontally */
-        transform: translateX(-50%); /* Center horizontally */
+        transform: translateX(-40%); /* Center horizontally */
     }
 
       .title {
