@@ -142,10 +142,14 @@
                 overflow: hidden;
         }
         
-            .profile-image {
+    .profile-image {
         width: 210px; /* Adjust this value to resize the profile image */
         height: auto; /* Maintain aspect ratio */
         max-width: 100%; /* Ensure it fits within the screen */
+        position: absolute; /* Positioning within the parent */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Centering adjustments */
     }
 
     .art-frame {
