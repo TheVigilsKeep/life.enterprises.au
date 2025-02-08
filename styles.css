@@ -152,6 +152,6 @@
         width: 150px; /* Adjust this value to resize the art frame */
         height: auto; /* Maintain aspect ratio */
         max-width: 100%; /* Ensure it fits within the screen */
-        bottom: 25%;
+        bottom: -25%;
     }
 }
