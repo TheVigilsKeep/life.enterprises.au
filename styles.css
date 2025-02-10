@@ -134,7 +134,7 @@ body, html {
 }
 
 
-@media screen only and (min width: 250px) {
+@media screen only and (min width: 360px) {
         
 body, html {
             margin: 0;
