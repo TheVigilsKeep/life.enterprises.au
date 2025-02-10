@@ -161,24 +161,28 @@ a,
         position: absolute;
         top: 45%; /* Adjust this value to move the contact me button vertically */
         left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        color:#fd77fe;
     }
     
     .character-creation {
         position: absolute;
         top: 60.5%; /* Adjust this value to move the music library button vertically */
         left: 0%; /* Adjust this value to move the contact me button horizontally */
+        color:#fd77fe;
     }
 
     .information-bank {
         position: absolute;
         top: 72%; /* Adjust this value to move the cinematic art museum button vertically */
         left: 0%; /* Adjust this value to move the contact me button horizontally */
+        color:#fd77fe;
     }
 
     .mini-games {
         position: absolute;
         top: 83.3%; /* Adjust this value to move the boutique button vertically */
         left: 0%; /* Adjust this value to move the contact me button horizontally */
+        color:#fd77fe;
     }
 
         .social-links {
