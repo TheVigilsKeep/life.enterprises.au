@@ -146,7 +146,7 @@ a,
         top: 8.5%; /* Adjust this value to move the frame vertically */
         left: 39%; /* Adjust this value to move the frame horizontally */
         z-index: 1; /* Ensure it appears on top */
-        filter: hue-rotate(427deg) brightness(150%);
+        filter: hue-rotate(43deg) brightness(160%);
     }
 
     .profile-image {
@@ -156,38 +156,42 @@ a,
         top: 190px;
         left: 772px;
         position: absolute;
-        filter: sepia(30%) hue-rotate(340deg)
+        filter: sepia(10%) hue-rotate(10deg)
     }
 
     .gallery {
         font-family: "Times New Roman";
         position: absolute;
         top: 45%; /* Adjust this value to move the contact me button vertically */
-        left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        left: -1%; /* Adjust this value to move the contact me button horizontally */
+        align-items: center;
         color:#fd77fe;
     }
     
     .character-creation {
         font-family: "Times New Roman";
         position: absolute;
-        top: 60.5%; /* Adjust this value to move the music library button vertically */
-        left: 0%; /* Adjust this value to move the contact me button horizontally */
+        top: 57.5%; /* Adjust this value to move the music library button vertically */
+        left: -1%; /* Adjust this value to move the contact me button horizontally */
+        align-items: center;
         color:#fd77fe;
     }
 
     .information-bank {
         font-family: "Times New Roman";
         position: absolute;
-        top: 72%; /* Adjust this value to move the cinematic art museum button vertically */
-        left: 0%; /* Adjust this value to move the contact me button horizontally */
+        top: 70%; /* Adjust this value to move the cinematic art museum button vertically */
+        left: -1%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
+        align-items: center;
     }
 
     .mini-games {
         position: absolute;
         top: 83.3%; /* Adjust this value to move the boutique button vertically */
-        left: 0%; /* Adjust this value to move the contact me button horizontally */
+        left: -1%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
+        align-items: center;
     }
 
         .social-links {
@@ -196,14 +200,14 @@ a,
         align-items: center;
         position: absolute;
         bottom: 58%; /* Adjust this value to position the social links vertically */
-        left: 65.7%;
-        transform: translate(-50%, -265%);
+        left: 62.7%;
+        transform: translate(-50%, -50%);
         width: 45%; /* Ensure it fits within the screen */
     }
 
     .social-links a {
         margin: 0px 0; /* Adjust this value for spacing between the links */
-        width: 40px; /* Adjust this value to resize the social icons */
+        width: 60px; /* Adjust this value to resize the social icons */
         height: 40px; /* Maintain aspect ratio */
     }
 
