@@ -156,6 +156,7 @@ a,
         top: 190px;
         left: 772px;
         position: absolute;
+        filter: sepia(30%) hue-rotate(340deg)
     }
 
     .gallery {
