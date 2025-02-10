@@ -146,6 +146,7 @@ a,
         top: 8.5%; /* Adjust this value to move the frame vertically */
         left: 39%; /* Adjust this value to move the frame horizontally */
         z-index: 1; /* Ensure it appears on top */
+        filter: hue-rotate(427deg) brightness(150%);
     }
 
     .profile-image {
@@ -158,6 +159,7 @@ a,
     }
 
     .gallery {
+        font-family: "Times New Roman";
         position: absolute;
         top: 45%; /* Adjust this value to move the contact me button vertically */
         left: 0.1%; /* Adjust this value to move the contact me button horizontally */
@@ -165,6 +167,7 @@ a,
     }
     
     .character-creation {
+        font-family: "Times New Roman";
         position: absolute;
         top: 60.5%; /* Adjust this value to move the music library button vertically */
         left: 0%; /* Adjust this value to move the contact me button horizontally */
@@ -172,6 +175,7 @@ a,
     }
 
     .information-bank {
+        font-family: "Times New Roman";
         position: absolute;
         top: 72%; /* Adjust this value to move the cinematic art museum button vertically */
         left: 0%; /* Adjust this value to move the contact me button horizontally */
