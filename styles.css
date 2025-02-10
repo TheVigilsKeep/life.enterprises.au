@@ -146,7 +146,7 @@ a,
         top: 8.5%; /* Adjust this value to move the frame vertically */
         left: 39%; /* Adjust this value to move the frame horizontally */
         z-index: 1; /* Ensure it appears on top */
-        filter: hue-rotate(43deg) brightness(160%);
+        filter: hue-rotate(24deg) brightness(160%) saturate(55%);
     }
 
     .profile-image {
@@ -156,7 +156,7 @@ a,
         top: 190px;
         left: 772px;
         position: absolute;
-        filter: sepia(10%) hue-rotate(10deg)
+        filter: sepia(10%) hue-rotate(300deg)
     }
 
     .gallery {
