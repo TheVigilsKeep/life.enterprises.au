@@ -166,7 +166,7 @@ a:hover, a:active {
         top: 190px;
         left: 802.9px;
         position: absolute;
-        filter: sepia(10%)
+        filter: sepia(10%) hue-rotate(300deg)
     }
 
     .gallery {
@@ -190,7 +190,7 @@ a:hover, a:active {
     .information-bank {
         font-family: "Times New Roman";
         position: absolute;
-        top: 68.5%; /* Adjust this value to move the cinematic art museum button vertically */
+        top: 68%; /* Adjust this value to move the cinematic art museum button vertically */
         left: 1%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
         align-items: center;
@@ -227,4 +227,5 @@ a:hover, a:active {
         height: auto; /* Maintain aspect ratio */
     }
 }
+
 
