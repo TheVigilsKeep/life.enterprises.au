@@ -64,6 +64,7 @@ a,
         padding: 20px;
         position: relative;
         top: -05px;
+        left: 30px;
     }
 
     .container {
@@ -134,17 +135,26 @@ a,
     h6 {
         font-size: 8pt;
         padding-bottom: 18pt;
-        font-family: "Arial";
+        font-family: "Times New Roman";
     }
 
-    a {
-        font-size: 16pt;
+a:link, a:visited {
+        font-family: "Times New Roman";
+        font-size: 40pt;
+        text-align: center;
+        text-decoration: none;
+        color:#fd77fe;
+    }
+
+a:hover, a:active {
+        font-size: 40pt;
+        color: darkred;
     }
 
     .art-frame {
         position: absolute;
         top: 8.5%; /* Adjust this value to move the frame vertically */
-        left: 39%; /* Adjust this value to move the frame horizontally */
+        left: 40.63%; /* Adjust this value to move the frame horizontally */
         z-index: 1; /* Ensure it appears on top */
         filter: hue-rotate(24deg) brightness(160%) saturate(55%);
     }
@@ -154,7 +164,7 @@ a,
         width: 380px;
         height: 380px;
         top: 190px;
-        left: 772px;
+        left: 802.9px;
         position: absolute;
         filter: sepia(10%) hue-rotate(300deg)
     }
@@ -163,7 +173,7 @@ a,
         font-family: "Times New Roman";
         position: absolute;
         top: 45%; /* Adjust this value to move the contact me button vertically */
-        left: -1%; /* Adjust this value to move the contact me button horizontally */
+        left: 0.8%; /* Adjust this value to move the contact me button horizontally */
         align-items: center;
         color:#fd77fe;
     }
@@ -171,8 +181,8 @@ a,
     .character-creation {
         font-family: "Times New Roman";
         position: absolute;
-        top: 57.5%; /* Adjust this value to move the music library button vertically */
-        left: -1%; /* Adjust this value to move the contact me button horizontally */
+        top: 56.5%; /* Adjust this value to move the music library button vertically */
+        left: 1%; /* Adjust this value to move the contact me button horizontally */
         align-items: center;
         color:#fd77fe;
     }
@@ -180,16 +190,17 @@ a,
     .information-bank {
         font-family: "Times New Roman";
         position: absolute;
-        top: 70%; /* Adjust this value to move the cinematic art museum button vertically */
-        left: -1%; /* Adjust this value to move the contact me button horizontally */
+        top: 69%; /* Adjust this value to move the cinematic art museum button vertically */
+        left: 1%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
         align-items: center;
     }
 
     .mini-games {
+        font-family: "Times New Roman";
         position: absolute;
-        top: 83.3%; /* Adjust this value to move the boutique button vertically */
-        left: -1%; /* Adjust this value to move the contact me button horizontally */
+        top: 80.3%; /* Adjust this value to move the boutique button vertically */
+        left: 1%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
         align-items: center;
     }
@@ -199,8 +210,8 @@ a,
         flex-direction: row;
         align-items: center;
         position: absolute;
-        bottom: 58%; /* Adjust this value to position the social links vertically */
-        left: 62.7%;
+        bottom: 60%; /* Adjust this value to position the social links vertically */
+        left: 63%;
         transform: translate(-50%, -50%);
         width: 45%; /* Ensure it fits within the screen */
     }
