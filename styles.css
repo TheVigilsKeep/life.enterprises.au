@@ -173,7 +173,7 @@ a:hover, a:active {
         font-family: "Times New Roman";
         position: absolute;
         top: 45%; /* Adjust this value to move the contact me button vertically */
-        left: 0.8%; /* Adjust this value to move the contact me button horizontally */
+        left: 0.6%; /* Adjust this value to move the contact me button horizontally */
         align-items: center;
         color:#fd77fe;
     }
@@ -182,7 +182,7 @@ a:hover, a:active {
         font-family: "Times New Roman";
         position: absolute;
         top: 56.5%; /* Adjust this value to move the music library button vertically */
-        left: 1%; /* Adjust this value to move the contact me button horizontally */
+        left: 0.3%; /* Adjust this value to move the contact me button horizontally */
         align-items: center;
         color:#fd77fe;
     }
@@ -191,7 +191,7 @@ a:hover, a:active {
         font-family: "Times New Roman";
         position: absolute;
         top: 68%; /* Adjust this value to move the cinematic art museum button vertically */
-        left: 1%; /* Adjust this value to move the contact me button horizontally */
+        left: 0%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
         align-items: center;
     }
@@ -200,7 +200,7 @@ a:hover, a:active {
         font-family: "Times New Roman";
         position: absolute;
         top: 80.3%; /* Adjust this value to move the boutique button vertically */
-        left: 1%; /* Adjust this value to move the contact me button horizontally */
+        left: 0.1%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
         align-items: center;
     }
