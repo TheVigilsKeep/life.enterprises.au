@@ -166,7 +166,7 @@ a:hover, a:active {
         top: 190px;
         left: 802.9px;
         position: absolute;
-        filter: sepia(10%) hue-rotate(300deg)
+        filter: sepia(10%)
     }
 
     .gallery {
@@ -227,5 +227,4 @@ a:hover, a:active {
         height: auto; /* Maintain aspect ratio */
     }
 }
-
 
