@@ -152,7 +152,7 @@ a,
         z-index: 0;/* Ensure it appears below the art frame */
         width: 380px;
         height: 380px;
-        top: 189.5px;
+        top: 190px;
         left: 772px;
         position: absolute;
     }
@@ -203,5 +203,4 @@ a,
         height: auto; /* Maintain aspect ratio */
     }
 }
-
 
