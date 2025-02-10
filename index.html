@@ -1,82 +1,205 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="stylesheet" href="styles.css"/>
-    <title>MAIN_MENU</title>
-  
-</head>
-<body class="c1 doc-content">
-    <div class="header item">
-        <p><span class="title">The_Vigils_Keep</span></p>
-    </div>
+/* Default styles for hiding elements */ 
+@media screen and (min-width: 0px) {
+body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+.header,
+.container,
+.title,
+.subtitle,
+li, p,
+h1, h2, h3, h4, h5, h6,
+a,
+.art-frame,
+.profile-image,
+.gallery,
+.character-creation,
+.information-bank,
+.mini-games {
+    display: none;
+}
+
+/* Styles for minimum width of 1100px */
+@media screen and (min-width: 1100px) {
+    body, html {
+        height: 1830px;
+        width: 1920px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
     
-    <div class="container item">
-        <p>
-            <a href="https://thevigilskeep.github.io/life.enterprises.au/profile.html">
-                <img src="my pfp.jpg" width="500px" height="480px" class="profile-image"/> <!-- Adjust the size and position as needed -->
-            
-            <img src="ROSE_GOLD_FRAME.png" width="420px" height="450px" class="art-frame"/> <!-- Adjust the size and position as needed -->
-        </p> </a>
-    </div>
+    .header,
+    .container,
+    .title,
+    .subtitle,
+    li, p,
+    h1, h2, h3, h4, h5, h6,
+    a,
+    .art-frame,
+    .profile-image,
+    .gallery,
+    .character-creation,
+    .information-bank,
+    .mini-games {
+        display: block;
+    }
 
-    <div class="container item gallery">
-        <p>
-            <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277709487%26usg%3DAOvVaw0x[...]">
-                <img src="path_to_your_image.jpg"/> </* Insert gallery button here */>
-            </a>
-        </p>
-    </div>
+    .header {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        top: -05px;
+    }
 
-    <div class="container item character-creation">
-        <p>
-            <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277709856%26usg%3DAOvVaw3e[...]">
-                <img src="path_to_your_image.jpg"/> </* Insert music library button here */>
-            </a>
-        </p>
-    </div>
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-    <div class="container item information-bank">
-        <p>
-            <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277710211%26usg%3DAOvVaw2M[...]">
-                <img src="path_to_your_image.jpg"/> </* Insert cinematic art museum button here */>
-            </a>
-        </p>
-    </div>
+    .item {
+        margin: 15px; /* Default margin, you can adjust this manually */
+    }
 
-    <div class="container item mini-games">
-        <p>
-            <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttp://docs.google.com/putlinkhere%26sa%3DD%26source%3Deditors%26ust%3D1668921277710601%26usg%3DAOvVaw3x[...]">
-                <img src="path_to_your_image.jpg"/> </* Insert boutique button here */>
-            </a>
-        </p>
-    </div>
+    .title {
+        font-size: 36pt;
+        font-family: "Arial";
+        padding-bottom: 6pt;
+    }
 
-        <div class="social-links">
+    .subtitle {
+        padding-top: 18pt;
+        padding-bottom: 4pt;
+        font-size: 24pt;
+        font-family: "Georgia";
+        color: #666666;
+        font-style: italic;
+    }
 
-        <a href="https://www.youtube.com/@The_Vigil_Creature" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
-            
-        <a href="https://www.instagram.com/the_vigils_keep/" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
-            
-        <a href="https://www.youtube.com/@The_Vigil_Creature" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
+    li, p {
+        margin: 0;
+        font-size: 11pt;
+        font-family: "Arial";
+    }
 
-        <a href="https://discord.gg/dA6KQErGMX" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
-            
-        <a href="https://www.threads.net/@the_vigils_keep" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
+    h1 {
+        font-size: 24pt;
+        padding-bottom: 12pt;
+        font-family: "Arial";
+    }
 
-        <a href="https://www.tumblr.com/blog/the-vigils-keep" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
-            
-        <a href="https://soundcloud.com/user-942326157" target="_blank">
-                <img src="path_to_your_image.jpg"/> </a>
-    </div>
+    h2 {
+        font-size: 18pt;
+        padding-bottom: 11.2pt;
+        font-family: "Arial";
+    }
+
+    h3 {
+        font-size: 14pt;
+        padding-bottom: 12pt;
+        font-family: "Arial";
+    }
+
+    h4 {
+        font-size: 12pt;
+        padding-bottom: 12.8pt;
+        font-family: "Arial";
+    }
+
+    h5 {
+        font-size: 9pt;
+        padding-bottom: 12.8pt;
+        font-family: "Arial";
+    }
+
+    h6 {
+        font-size: 8pt;
+        padding-bottom: 18pt;
+        font-family: "Arial";
+    }
+
+    a {
+        font-size: 16pt;
+    }
+
+    .art-frame {
+        position: absolute;
+        top: 8.5%; /* Adjust this value to move the frame vertically */
+        left: 39%; /* Adjust this value to move the frame horizontally */
+        z-index: 1; /* Ensure it appears on top */
+    }
+
+    .profile-image {
+        z-index: 0;/* Ensure it appears below the art frame */
+        width: 380px;
+        height: 380px;
+        top: 189.5px;
+        left: 772px;
+        position: absolute;
+    }
+
+    .gallery {
+        position: absolute;
+        top: 45%; /* Adjust this value to move the contact me button vertically */
+        left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+    }
     
-</body>
-</html>
+    .character-creation {
+        position: absolute;
+        top: 60.5%; /* Adjust this value to move the music library button vertically */
+        left: 0%; /* Adjust this value to move the contact me button horizontally */
+    }
+
+    .information-bank {
+        position: absolute;
+        top: 72%; /* Adjust this value to move the cinematic art museum button vertically */
+        left: 0%; /* Adjust this value to move the contact me button horizontally */
+    }
+
+    .mini-games {
+        position: absolute;
+        top: 83.3%; /* Adjust this value to move the boutique button vertically */
+        left: 0%; /* Adjust this value to move the contact me button horizontally */
+    }
+
+        .social-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        bottom: 58%; /* Adjust this value to position the social links vertically */
+        left: 65%;
+        transform: translate(-50%, -265%);
+        width: 45%; /* Ensure it fits within the screen */
+    }
+
+    .social-links a {
+        margin: 0px 0; /* Adjust this value for spacing between the links */
+        width: 40px; /* Adjust this value to resize the social icons */
+        height: 40px; /* Maintain aspect ratio */
+    }
+
+    .social-links img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
