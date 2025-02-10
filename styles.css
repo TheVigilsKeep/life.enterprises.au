@@ -81,8 +81,9 @@ a,
 
     .title {
         font-size: 36pt;
-        font-family: "Arial";
+        font-family: "Times New Roman";
         padding-bottom: 6pt;
+        color:#fd77fe;
     }
 
     .subtitle {
