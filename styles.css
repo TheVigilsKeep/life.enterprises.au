@@ -1,5 +1,5 @@
 /* Default styles for hiding elements */ 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 599px) and (min-height:740px;) {
 body, html {
             margin: 0;
             padding: 0;
@@ -407,8 +407,7 @@ a:hover, a:active {
 }
 
 
-
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 360px) { /*360px width phones*/
 body, html {
             margin: 0;
             padding: 0;
@@ -425,8 +424,8 @@ body, html {
         }
 
         body, html {
-        height: 1830px;
-        width: 1920px;
+        height: 2220px;
+        width: 1280px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -537,7 +536,7 @@ a:link, a:visited {
     }
 
 a:hover, a:active {
-        font-size: 40pt;
+        font-size: 6vw;
         color: darkred;
     }
 
@@ -546,15 +545,15 @@ a:hover, a:active {
         width: 530px;
         height: 510px;
         top: 9.5%; /* Adjust this value to move the frame vertically */
-        left: 37.63%; /* Adjust this value to move the frame horizontally */
+        left: 32.5%; /* Adjust this value to move the frame horizontally */
         z-index: 1; /* Ensure it appears on top */
         filter: hue-rotate(24deg) brightness(160%) saturate(55%);
     }
 
     .profile-image {
         z-index: 0;/* Ensure it appears below the art frame */
-        top: 190px;
-        left: 740px;
+        top: 230px;
+        left: 432px;
         position: absolute;
         filter: sepia(10%)
     }
@@ -601,7 +600,7 @@ a:hover, a:active {
         align-items: center;
         position: absolute;
         bottom: 60%; /* Adjust this value to position the social links vertically */
-        left: 63%;
+        left: 58.3%;
         transform: translate(-50%, -50%);
         width: 45%; /* Ensure it fits within the screen */
     }
