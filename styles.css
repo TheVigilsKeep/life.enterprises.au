@@ -1,5 +1,5 @@
 /* Default styles for hiding elements */ 
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 1020px) {
 body, html {
             margin: 0;
             padding: 0;
@@ -15,20 +15,198 @@ body, html {
             position: relative;
         }
 
-.header,
-.container,
-.title,
-.subtitle,
-li, p,
-h1, h2, h3, h4, h5, h6,
-a,
-.art-frame,
-.profile-image,
-.gallery,
-.character-creation,
-.information-bank,
-.mini-games {
-    display: none;
+        body, html {
+        height: 1830px;
+        width: 1920px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    
+    .header,
+    .container,
+    .title,
+    .subtitle,
+    li, p,
+    h1, h2, h3, h4, h5, h6,
+    a,
+    .art-frame,
+    .profile-image,
+    .gallery,
+    .character-creation,
+    .information-bank,
+    .mini-games {
+        display: block;
+    }
+
+    .header {
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        top: -05px;
+        left: 30px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .item {
+        margin: 15px; /* Default margin, you can adjust this manually */
+    }
+
+    .title {
+        font-size: 36pt;
+        font-family: "Times New Roman";
+        padding-bottom: 6pt;
+        color:#fd77fe;
+    }
+
+    .subtitle {
+        padding-top: 18pt;
+        padding-bottom: 4pt;
+        font-size: 24pt;
+        font-family: "Georgia";
+        color: #666666;
+        font-style: italic;
+    }
+
+    li, p {
+        margin: 0;
+        font-size: 11pt;
+        font-family: "Arial";
+    }
+
+    h1 {
+        font-size: 24pt;
+        padding-bottom: 12pt;
+        font-family: "Arial";
+    }
+
+    h2 {
+        font-size: 10pt;
+        padding-bottom: 11.2pt;
+        font-family: "Arial";
+    }
+
+    h3 {
+        font-size: 14pt;
+        padding-bottom: 12pt;
+        font-family: "Arial";
+    }
+
+    h4 {
+        font-size: 12pt;
+        padding-bottom: 12.8pt;
+        font-family: "Arial";
+    }
+
+    h5 {
+        font-size: 9pt;
+        padding-bottom: 12.8pt;
+        font-family: "Arial";
+    }
+
+    h6 {
+        font-size: 8pt;
+        padding-bottom: 18pt;
+        font-family: "Times New Roman";
+    }
+
+a:link, a:visited {
+        font-family: "Times New Roman";
+        font-size: 5vw;
+        text-align: center;
+        text-decoration: none;
+        color:#fd77fe;
+    }
+
+a:hover, a:active {
+        font-size: 40pt;
+        color: darkred;
+    }
+
+    .art-frame {
+        position: absolute;
+        width: 530px;
+        height: 510px;
+        top: 9.5%; /* Adjust this value to move the frame vertically */
+        left: 37.63%; /* Adjust this value to move the frame horizontally */
+        z-index: 1; /* Ensure it appears on top */
+        filter: hue-rotate(24deg) brightness(160%) saturate(55%);
+    }
+
+    .profile-image {
+        z-index: 0;/* Ensure it appears below the art frame */
+        top: 190px;
+        left: 740px;
+        position: absolute;
+        filter: sepia(10%)
+    }
+
+    .gallery {
+        font-family: "Times New Roman";
+        position: absolute;
+        top: 46%; /* Adjust this value to move the contact me button vertically */
+        left: 0.6%; /* Adjust this value to move the contact me button horizontally */
+        align-items: center;
+        color:#fd77fe;
+    }
+    
+    .character-creation {
+        font-family: "Times New Roman";
+        position: absolute;
+        top: 59.5%; /* Adjust this value to move the music library button vertically */
+        left: 0.3%; /* Adjust this value to move the contact me button horizontally */
+        align-items: center;
+        color:#fd77fe;
+    }
+
+    .information-bank {
+        font-family: "Times New Roman";
+        position: absolute;
+        top: 73%; /* Adjust this value to move the cinematic art museum button vertically */
+        left: 0%; /* Adjust this value to move the contact me button horizontally */
+        color:#fd77fe;
+        align-items: center;
+    }
+
+    .mini-games {
+        font-family: "Times New Roman";
+        position: absolute;
+        top: 86.7%; /* Adjust this value to move the boutique button vertically */
+        left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        color:#fd77fe;
+        align-items: center;
+    }
+
+        .social-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        bottom: 60%; /* Adjust this value to position the social links vertically */
+        left: 63%;
+        transform: translate(-50%, -50%);
+        width: 45%; /* Ensure it fits within the screen */
+    }
+
+    .social-links a {
+        margin: 0px 0; /* Adjust this value for spacing between the links */
+        width: 60px; /* Adjust this value to resize the social icons */
+        height: 40px; /* Maintain aspect ratio */
+    }
+
+    .social-links img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
 }
 
 /* Styles for minimum width of 1100px */
@@ -154,17 +332,17 @@ a:hover, a:active {
     .art-frame {
         position: absolute;
         top: 8.5%; /* Adjust this value to move the frame vertically */
-        left: 40.63%; /* Adjust this value to move the frame horizontally */
+        left: 38%; /* Adjust this value to move the frame horizontally */
         z-index: 1; /* Ensure it appears on top */
         filter: hue-rotate(24deg) brightness(160%) saturate(55%);
     }
 
     .profile-image {
         z-index: 0;/* Ensure it appears below the art frame */
-        width: 380px;
-        height: 380px;
-        top: 190px;
-        left: 801px;
+        width: 490px;
+        height: 476px;
+        top: 173px;
+        left: 750px;
         position: absolute;
         filter: sepia(10%)
     }
@@ -228,3 +406,214 @@ a:hover, a:active {
     }
 }
 
+
+
+@media screen and (min-width: 1000px) {
+body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        body, html {
+        height: 1830px;
+        width: 1920px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    
+    .header,
+    .container,
+    .title,
+    .subtitle,
+    li, p,
+    h1, h2, h3, h4, h5, h6,
+    a,
+    .art-frame,
+    .profile-image,
+    .gallery,
+    .character-creation,
+    .information-bank,
+    .mini-games {
+        display: block;
+    }
+
+    .header {
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        top: -05px;
+        left: 30px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .item {
+        margin: 15px; /* Default margin, you can adjust this manually */
+    }
+
+    .title {
+        font-size: 36pt;
+        font-family: "Times New Roman";
+        padding-bottom: 6pt;
+        color:#fd77fe;
+    }
+
+    .subtitle {
+        padding-top: 18pt;
+        padding-bottom: 4pt;
+        font-size: 24pt;
+        font-family: "Georgia";
+        color: #666666;
+        font-style: italic;
+    }
+
+    li, p {
+        margin: 0;
+        font-size: 11pt;
+        font-family: "Arial";
+    }
+
+    h1 {
+        font-size: 24pt;
+        padding-bottom: 12pt;
+        font-family: "Arial";
+    }
+
+    h2 {
+        font-size: 10pt;
+        padding-bottom: 11.2pt;
+        font-family: "Arial";
+    }
+
+    h3 {
+        font-size: 14pt;
+        padding-bottom: 12pt;
+        font-family: "Arial";
+    }
+
+    h4 {
+        font-size: 12pt;
+        padding-bottom: 12.8pt;
+        font-family: "Arial";
+    }
+
+    h5 {
+        font-size: 9pt;
+        padding-bottom: 12.8pt;
+        font-family: "Arial";
+    }
+
+    h6 {
+        font-size: 8pt;
+        padding-bottom: 18pt;
+        font-family: "Times New Roman";
+    }
+
+a:link, a:visited {
+        font-family: "Times New Roman";
+        font-size: 5vw;
+        text-align: center;
+        text-decoration: none;
+        color:#fd77fe;
+    }
+
+a:hover, a:active {
+        font-size: 40pt;
+        color: darkred;
+    }
+
+    .art-frame {
+        position: absolute;
+        width: 530px;
+        height: 510px;
+        top: 9.5%; /* Adjust this value to move the frame vertically */
+        left: 37.63%; /* Adjust this value to move the frame horizontally */
+        z-index: 1; /* Ensure it appears on top */
+        filter: hue-rotate(24deg) brightness(160%) saturate(55%);
+    }
+
+    .profile-image {
+        z-index: 0;/* Ensure it appears below the art frame */
+        top: 190px;
+        left: 740px;
+        position: absolute;
+        filter: sepia(10%)
+    }
+
+    .gallery {
+        font-family: "Times New Roman";
+        position: absolute;
+        top: 46%; /* Adjust this value to move the contact me button vertically */
+        left: 0.6%; /* Adjust this value to move the contact me button horizontally */
+        align-items: center;
+        color:#fd77fe;
+    }
+    
+    .character-creation {
+        font-family: "Times New Roman";
+        position: absolute;
+        top: 59.5%; /* Adjust this value to move the music library button vertically */
+        left: 0.3%; /* Adjust this value to move the contact me button horizontally */
+        align-items: center;
+        color:#fd77fe;
+    }
+
+    .information-bank {
+        font-family: "Times New Roman";
+        position: absolute;
+        top: 73%; /* Adjust this value to move the cinematic art museum button vertically */
+        left: 0%; /* Adjust this value to move the contact me button horizontally */
+        color:#fd77fe;
+        align-items: center;
+    }
+
+    .mini-games {
+        font-family: "Times New Roman";
+        position: absolute;
+        top: 86.7%; /* Adjust this value to move the boutique button vertically */
+        left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        color:#fd77fe;
+        align-items: center;
+    }
+
+        .social-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        bottom: 60%; /* Adjust this value to position the social links vertically */
+        left: 63%;
+        transform: translate(-50%, -50%);
+        width: 45%; /* Ensure it fits within the screen */
+    }
+
+    .social-links a {
+        margin: 0px 0; /* Adjust this value for spacing between the links */
+        width: 60px; /* Adjust this value to resize the social icons */
+        height: 40px; /* Maintain aspect ratio */
+    }
+
+    .social-links img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+}
