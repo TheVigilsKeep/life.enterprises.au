@@ -214,7 +214,7 @@ a:hover, a:active {
      }
 
      .insta:hover, insta:active {
-        filter: hue-rotate(388deg) brightness(100%);
+        filter: hue-rotate(15deg) brightness(10%) saturate(10);
      }
 
      .discord {
@@ -223,7 +223,7 @@ a:hover, a:active {
      }
 
      .discord:hover, discord:active {
-        filter: hue-rotate(388deg) brightness(100%);
+        filter: hue-rotate(15deg) brightness(10%) saturate(10);
      }
 
       .threads {
@@ -231,7 +231,7 @@ a:hover, a:active {
       }
 
      .threads:hover, insta:active {
-        filter: hue-rotate(388deg) brightness(100%);
+        filter: hue-rotate(15deg) brightness(10%) saturate(10);
      }
           }
 
