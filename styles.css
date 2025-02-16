@@ -327,6 +327,7 @@ a:link, a:visited {
 a:hover, a:active {
         font-size: 40pt;
         color: darkred;
+        background-color: #fd77fe;
     }
 
     .art-frame {
