@@ -207,7 +207,33 @@ a:hover, a:active {
         width: 100%;
         height: auto; /* Maintain aspect ratio */
     }
-}
+      }
+
+     .insta {
+        filter: hue-rotate(-25deg) brightness(150%);
+     }
+
+     .insta:hover, insta:active {
+        filter: hue-rotate(388deg) brightness(100%);
+     }
+
+     .discord {
+        filter: hue-rotate(330deg) brightness(110%);
+         
+     }
+
+     .discord:hover, discord:active {
+        filter: hue-rotate(388deg) brightness(100%);
+     }
+
+      .threads {
+          filter: hue-rotate(343deg) brightness(130%);
+      }
+
+     .threads:hover, insta:active {
+        filter: hue-rotate(388deg) brightness(100%);
+     }
+          }
 
 /* Styles for minimum width of 1100px */
 @media screen and (min-width: 1100px) {
