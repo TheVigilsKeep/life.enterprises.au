@@ -570,9 +570,9 @@ a:hover, a:active {
     .art-frame {
         position: absolute;
         width: 530px;
-        height: 510px;
+        height: 514px;
         top: 9.6%; /* Adjust this value to move the frame vertically */
-        left: 32.1%; /* Adjust this value to move the frame horizontally */
+        left: 32.5%; /* Adjust this value to move the frame horizontally */
         z-index: 1; /* Ensure it appears on top */
         filter: hue-rotate(24deg) brightness(160%) saturate(55%);
     }
