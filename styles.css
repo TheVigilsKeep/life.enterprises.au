@@ -217,6 +217,14 @@ a:hover, a:active {
         filter: hue-rotate(15deg) brightness(10%) saturate(10);
      }
 
+      .youtube {
+          filter: hue-rotate(343deg) brightness(100%);
+      }
+
+     .youtube:hover, insta:active {
+        filter: hue-rotate(35deg) brightness(10%) saturate(10);
+     }
+
      .discord {
         filter: hue-rotate(330deg) brightness(110%);
          
@@ -232,6 +240,22 @@ a:hover, a:active {
 
      .threads:hover, insta:active {
         filter: hue-rotate(15deg) brightness(10%) saturate(10);
+     }
+
+      .tumblr {
+          filter: hue-rotate(343deg) brightness(130%);
+      }
+
+     .tumblr:hover, insta:active {
+        filter: hue-rotate(35deg) brightness(10%) saturate(10);
+     }
+
+      .soundcloud {
+          filter: hue-rotate(343deg) brightness(100%);
+      }
+
+     .soundcloud:hover, insta:active {
+        filter: hue-rotate(45deg) brightness(10%) saturate(10);
      }
           }
 
