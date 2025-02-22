@@ -501,11 +501,10 @@ body, html {
 
     .header {
         text-align: center;
-        padding: 70px;
+        padding: 20px;
         position: relative;
         top: -05px;
         left: 76px;
-        width: (100%);
     }
 
     .container {
@@ -522,7 +521,7 @@ body, html {
     }
 
     .title {
-        font-size: 36pt;
+        font-size: 46pt;
         font-family: "Times New Roman";
         padding-bottom: 6pt;
         color:#fd77fe;
