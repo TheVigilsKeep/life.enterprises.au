@@ -730,9 +730,9 @@ a:hover, a:active {
         align-items: center;
         position: absolute;
         bottom: 60%; /* Adjust this value to position the social links vertically */
-        left: 65.3%;
+        left: 88.8%;
         transform: translate(-50%, -50%);
-        width: 45%; /* Ensure it fits within the screen */
+        width: 95%; /* Ensure it fits within the screen */
     }
 
     .social-links a {
