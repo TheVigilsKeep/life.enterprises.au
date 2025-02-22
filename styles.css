@@ -585,6 +585,25 @@ a:hover, a:active {
         filter: sepia(10%)
     }
 
+    .venus1 {
+        z-index: 0;/* Ensure it appears below the art frame */
+        top: 500px;
+        left: 125px;
+        position: absolute;
+        filter: hue-rotate(712deg) brightness(140%);
+        height: 170px;
+        width: 110px;
+    }
+
+    .venus2 {
+        top: 500px;
+        left: 490px;
+        position: absolute;
+        filter: hue-rotate(712deg) brightness(140%);
+        height: 170px;
+        width: 110px;
+    }
+    
     .gallery {
         font-family: "Times New Roman";
         position: absolute;
@@ -592,6 +611,26 @@ a:hover, a:active {
         left: 0.6%; /* Adjust this value to move the contact me button horizontally */
         align-items: center;
         color:#fd77fe;
+    }
+
+    
+    .neptune1 {
+        z-index: 0;/* Ensure it appears below the art frame */
+        top: 660px;
+        left: 40px;
+        position: absolute;
+        filter: hue-rotate(712deg) brightness(140%);
+        height: 180px;
+        width: 130px;
+    }
+
+    .neptune2 {
+        top: 660px;
+        left: 550px;
+        position: absolute;
+        filter: hue-rotate(712deg) brightness(140%);
+        height: 180px;
+        width: 130px;
     }
     
     .character-creation {
@@ -603,6 +642,7 @@ a:hover, a:active {
         color:#fd77fe;
     }
 
+    
     .information-bank {
         font-family: "Times New Roman";
         position: absolute;
@@ -612,6 +652,26 @@ a:hover, a:active {
         align-items: center;
     }
 
+    .mercury1 {
+        z-index: 0;/* Ensure it appears below the art frame */
+        top: 800px;
+        left: 57px;
+        position: absolute;
+        filter: hue-rotate(712deg) brightness(140%);
+        height: 180px;
+        width: 110px;
+    }
+
+    .mercury2 {
+        top: 800px;
+        left: 550px;
+        position: absolute;
+        filter: hue-rotate(712deg) brightness(140%);
+        height: 180px;
+        width: 110px;
+    }
+    
+
     .mini-games {
         font-family: "Times New Roman";
         position: absolute;
@@ -619,6 +679,25 @@ a:hover, a:active {
         left: 0.1%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
         align-items: center;
+    }
+
+    .mars1 {
+        z-index: 0;/* Ensure it appears below the art frame */
+        top: 960px;
+        left: 120px;
+        position: absolute;
+        filter: hue-rotate(712deg) brightness(140%);
+        height: 150px;
+        width: 120px;
+    }
+
+    .mars2 {
+        top: 960px;
+        left: 480px;
+        position: absolute;
+        filter: hue-rotate(712deg) brightness(140%);
+        height: 150px;
+        width: 120px;
     }
  
         .social-links {
