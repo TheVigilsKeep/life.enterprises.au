@@ -591,6 +591,17 @@ a:hover, a:active {
         color: darkred;
     }
 
+.enquiries, .email {
+    font-size: 46pt;
+    font-family: "Times New Roman";
+    padding-bottom: 14pt;
+    color: #fd77fe;
+    position: relative; /* Allow for manual adjustments */
+    right: -70px; /* Adjust this value as needed to move the element to the right */
+    top: -10px;
+    width: auto; /* Adjust the width as needed */
+}
+    
     .art-frame {
         position: absolute;
         width: 530px;
