@@ -596,7 +596,7 @@ a:hover, a:active {
         width: 530px;
         height: 514px;
         top: 9.6%; /* Adjust this value to move the frame vertically */
-        left: 32.5%; /* Adjust this value to move the frame horizontally */
+        left: 35.5%; /* Adjust this value to move the frame horizontally */
         z-index: 1; /* Ensure it appears on top */
         filter: hue-rotate(24deg) brightness(160%) saturate(55%);
     }
@@ -604,7 +604,7 @@ a:hover, a:active {
     .profile-image {
         z-index: 0;/* Ensure it appears below the art frame */
         top: 230px;
-        left: 432px;
+        left: 470px;
         position: absolute;
         filter: sepia(10%)
     }
@@ -612,7 +612,7 @@ a:hover, a:active {
     .venus1 {
         z-index: 0;/* Ensure it appears below the art frame */
         top: 500px;
-        left: 125px;
+        left: 140px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 170px;
@@ -621,7 +621,7 @@ a:hover, a:active {
 
     .venus2 {
         top: 500px;
-        left: 490px;
+        left: 550px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 170px;
@@ -632,7 +632,7 @@ a:hover, a:active {
         font-family: "Times New Roman";
         position: absolute;
         top: 46%; /* Adjust this value to move the contact me button vertically */
-        left: 0.6%; /* Adjust this value to move the contact me button horizontally */
+        left: 5.7%; /* Adjust this value to move the contact me button horizontally */
         align-items: center;
         color:#fd77fe;
     }
@@ -641,7 +641,7 @@ a:hover, a:active {
     .neptune1 {
         z-index: 0;/* Ensure it appears below the art frame */
         top: 660px;
-        left: 40px;
+        left: 60px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 180px;
@@ -650,7 +650,7 @@ a:hover, a:active {
 
     .neptune2 {
         top: 660px;
-        left: 550px;
+        left: 600px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 180px;
@@ -661,7 +661,7 @@ a:hover, a:active {
         font-family: "Times New Roman";
         position: absolute;
         top: 59.5%; /* Adjust this value to move the music library button vertically */
-        left: 0.3%; /* Adjust this value to move the contact me button horizontally */
+        left: 5.3%; /* Adjust this value to move the contact me button horizontally */
         align-items: center;
         color:#fd77fe;
     }
@@ -671,7 +671,7 @@ a:hover, a:active {
         font-family: "Times New Roman";
         position: absolute;
         top: 73%; /* Adjust this value to move the cinematic art museum button vertically */
-        left: 0%; /* Adjust this value to move the contact me button horizontally */
+        left: 5%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
         align-items: center;
     }
@@ -679,7 +679,7 @@ a:hover, a:active {
     .mercury1 {
         z-index: 0;/* Ensure it appears below the art frame */
         top: 800px;
-        left: 57px;
+        left: 87px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 180px;
@@ -688,7 +688,7 @@ a:hover, a:active {
 
     .mercury2 {
         top: 800px;
-        left: 550px;
+        left: 580px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 180px;
@@ -700,15 +700,15 @@ a:hover, a:active {
         font-family: "Times New Roman";
         position: absolute;
         top: 86.7%; /* Adjust this value to move the boutique button vertically */
-        left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        left: 5.1%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
         align-items: center;
     }
 
     .mars1 {
         z-index: 0;/* Ensure it appears below the art frame */
-        top: 960px;
-        left: 120px;
+        top: 970px;
+        left: 130px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 150px;
@@ -716,8 +716,8 @@ a:hover, a:active {
     }
 
     .mars2 {
-        top: 960px;
-        left: 480px;
+        top: 970px;
+        left: 530px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 150px;
@@ -730,7 +730,7 @@ a:hover, a:active {
         align-items: center;
         position: absolute;
         bottom: 60%; /* Adjust this value to position the social links vertically */
-        left: 58.3%;
+        left: 65.3%;
         transform: translate(-50%, -50%);
         width: 45%; /* Ensure it fits within the screen */
     }
