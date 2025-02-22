@@ -501,10 +501,11 @@ body, html {
 
     .header {
         text-align: center;
-        padding: 20px;
+        padding: 70px;
         position: relative;
         top: -05px;
-        left: 30px;
+        left: 76px;
+        width: (100%);
     }
 
     .container {
