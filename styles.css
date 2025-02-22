@@ -601,6 +601,19 @@ a:hover, a:active {
         filter: hue-rotate(24deg) brightness(160%) saturate(55%);
     }
 
+.enquiries, .email {
+    font-size: 46pt;
+    font-family: "Times New Roman";
+    padding-bottom: 10pt;
+    color: #fd77fe;
+    text-align: right; /* Align text to the right */
+    margin: 0 auto;
+    position: relative; /* Allow for manual adjustments */
+    top: -13px;
+    right: -80px; /* Adjust this value as needed to move the element to the right */
+    width: auto; /* Adjust the width as needed */
+}
+    
     .profile-image {
         z-index: 0;/* Ensure it appears below the art frame */
         top: 230px;
@@ -730,7 +743,7 @@ a:hover, a:active {
         align-items: center;
         position: absolute;
         bottom: 60%; /* Adjust this value to position the social links vertically */
-        left: 89.4%;
+        left: 88.8%;
         transform: translate(-50%, -50%);
         width: 95%; /* Ensure it fits within the screen */
     }
