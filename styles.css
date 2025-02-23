@@ -613,7 +613,34 @@ a:hover, a:active {
     right: -80px; /* Adjust this value as needed to move the element to the right */
     width: auto; /* Adjust the width as needed */
 }
+
+
+        .trademark {
+        top: -90px;
+        left: 490px;
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        filter: hue-rotate(712deg)
+    }
+
+        .forum {
+        top: 100px;
+        left: 490px;
+        position: absolute;
+        height: 200px;
+        width: 200px;
+    }
     
+    .shop {
+        top: 274px;
+        left: 490px;
+        position: absolute;
+        height: 200px;
+        width: 200px;
+    }
+
+            
     .profile-image {
         z-index: 0;/* Ensure it appears below the art frame */
         top: 230px;
