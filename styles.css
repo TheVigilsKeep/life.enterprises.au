@@ -615,6 +615,7 @@ a:hover, a:active {
 }
 
 
+            
         .trademark {
         top: 90px;
         left: 480px;
@@ -623,14 +624,13 @@ a:hover, a:active {
         width: 200px;
         filter: hue-rotate(712deg)
     }
-
         .forum {
         top: 190px;
         left: 506px;
         position: absolute;
         height: 200px;
         width: 100px;
-        filter: hue-rotate(706deg);
+        filter: hue-rotate(705deg);
     }
     
     .shop {
@@ -639,9 +639,10 @@ a:hover, a:active {
         position: absolute;
         height: 200px;
         width: 200px;
-        filter: hue-rotate(712deg);
+        filter: hue-rotate(710deg);
     }
 
+            
             
     .profile-image {
         z-index: 0;/* Ensure it appears below the art frame */
