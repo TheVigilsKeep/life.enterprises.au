@@ -616,7 +616,7 @@ a:hover, a:active {
 
 
         .trademark {
-        top: -90px;
+        top: 90px;
         left: 490px;
         position: absolute;
         height: 200px;
@@ -625,11 +625,11 @@ a:hover, a:active {
     }
 
         .forum {
-        top: 100px;
-        left: 490px;
+        top: 190px;
+        left: 506px;
         position: absolute;
-        height: 200px;
-        width: 200px;
+        height: 190px;
+        width: 140px;
     }
     
     .shop {
