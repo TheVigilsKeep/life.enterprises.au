@@ -6,7 +6,6 @@ app = Flask(__name__)
 @app.route('/activate-ai', methods=['GET'])
 def activate_ai():
     try:
-        # Replace 'python_script.py' with the actual Python script you want to execute
         subprocess.run(['python', 'LobbyOfTheLost.py'], check=True)
         return jsonify(success=True)
     except subprocess.CalledProcessError as e:
