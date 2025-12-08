@@ -180,8 +180,10 @@ a:hover, a:active {
     .mini-games {
         font-family: "Times New Roman";
         position: absolute;
-        top: 86.7%; /* Adjust this value to move the boutique button vertically */
-        left: 0.1%; /* Adjust this value to move the contact me button horizontally */
+        top: 1940px; /* Adjust this value to move the boutique button vertically */
+        left: 650px; /* Adjust this value to move the contact me button horizontally */
+        height: 180px;
+        width: 110px;
         color:#fd77fe;
         align-items: center;
     }
