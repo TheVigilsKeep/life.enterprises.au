@@ -44,7 +44,7 @@ body, html {
         text-align: center;
         padding: 20px;
         position: relative;
-        top: -05px;
+        top: -5px;
         left: 30px;
     }
 
@@ -140,14 +140,6 @@ a:hover, a:active {
         left: 37.63%; /* Adjust this value to move the frame horizontally */
         z-index: 1; /* Ensure it appears on top */
         filter: hue-rotate(24deg) brightness(160%) saturate(55%);
-    }
-
-    .profile-image {
-        z-index: 0;/* Ensure it appears below the art frame */
-        top: 190px;
-        left: 740px;
-        position: absolute;
-        filter: sepia(10%)
     }
 
     .gallery {
@@ -393,7 +385,7 @@ a:hover, a:active {
         width: 490px;
         height: 476px;
         top: 173px;
-        left: 750px;
+        left: 70px;
         position: absolute;
         filter: sepia(10%)
     }
@@ -476,7 +468,7 @@ body, html {
 
         body, html {
         height: 2220px;
-        width: 1280px;
+        width: 1030px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -501,10 +493,10 @@ body, html {
 
     .header {
         text-align: center;
-        padding: 20px;
+        padding: 30px;
         position: relative;
-        top: -05px;
-        left: 76px;
+        top: -10px;
+        left: 30px;
     }
 
     .container {
@@ -521,7 +513,7 @@ body, html {
     }
 
     .title {
-        font-size: 46pt;
+        font-size: 75pt;
         font-family: "Times New Roman";
         padding-bottom: 6pt;
         color:#fd77fe;
@@ -537,8 +529,8 @@ body, html {
     }
 
     li, p {
-        margin: 0;
-        font-size: 11pt;
+        margin: 0px;
+        font-size: 28pt;
         font-family: "Arial";
     }
 
@@ -580,7 +572,7 @@ body, html {
 
 a:link, a:visited {
         font-family: "Times New Roman";
-        font-size: 5vw;
+        font-size: 14vw;
         text-align: center;
         text-decoration: none;
         color:#fd77fe;
@@ -595,8 +587,8 @@ a:hover, a:active {
         position: absolute;
         width: 530px;
         height: 514px;
-        top: 9.6%; /* Adjust this value to move the frame vertically */
-        left: 35.5%; /* Adjust this value to move the frame horizontally */
+        top: 15%; /* Adjust this value to move the frame vertically */
+        left: 28.5%; /* Adjust this value to move the frame horizontally */
         z-index: 1; /* Ensure it appears on top */
         filter: hue-rotate(24deg) brightness(160%) saturate(55%);
     }
@@ -606,7 +598,7 @@ a:hover, a:active {
     font-family: "Times New Roman";
     padding-bottom: 10pt;
     color: #fd77fe;
-    text-align: right; /* Align text to the right */
+    text-align: center; /* Align text to the right */
     margin: 0 auto;
     position: relative; /* Allow for manual adjustments */
     top: -13px;
@@ -617,28 +609,28 @@ a:hover, a:active {
 
             
         .trademark {
-        top: 90px;
-        left: 480px;
+        top: 140px;
+        left: 429px;
         position: absolute;
-        height: 200px;
-        width: 200px;
+        height: 140px;
+        width: 170px;
         filter: hue-rotate(712deg)
     }
         .forum {
-        top: 190px;
-        left: 506px;
+        top: 210px;
+        left: 435px;
         position: absolute;
-        height: 200px;
-        width: 100px;
+        height: 260px;
+        width: 135px;
         filter: hue-rotate(705deg);
     }
     
     .shop {
-        top: 274px;
-        left: 480px;
+        top: 314px;
+        left: 402px;
         position: absolute;
-        height: 200px;
-        width: 200px;
+        height: 255px;
+        width: 268px;
         filter: hue-rotate(710deg);
     }
 
@@ -646,16 +638,17 @@ a:hover, a:active {
             
     .profile-image {
         z-index: 0;/* Ensure it appears below the art frame */
-        top: 230px;
-        left: 470px;
+        top: 350px;
+        left: 310px;
         position: absolute;
         filter: sepia(10%)
     }
+    
 
     .venus1 {
         z-index: 0;/* Ensure it appears below the art frame */
         top: 500px;
-        left: 140px;
+        left: 55px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 170px;
@@ -664,7 +657,7 @@ a:hover, a:active {
 
     .venus2 {
         top: 500px;
-        left: 550px;
+        left: 500px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 170px;
@@ -674,8 +667,8 @@ a:hover, a:active {
     .gallery {
         font-family: "Times New Roman";
         position: absolute;
-        top: 46%; /* Adjust this value to move the contact me button vertically */
-        left: 5.7%; /* Adjust this value to move the contact me button horizontally */
+        top: 58%; /* Adjust this value to move the contact me button vertically */
+        left: 5%; /* Adjust this value to move the contact me button horizontally */
         align-items: center;
         color:#fd77fe;
     }
@@ -684,7 +677,7 @@ a:hover, a:active {
     .neptune1 {
         z-index: 0;/* Ensure it appears below the art frame */
         top: 660px;
-        left: 60px;
+        left: 35px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 180px;
@@ -693,7 +686,7 @@ a:hover, a:active {
 
     .neptune2 {
         top: 660px;
-        left: 600px;
+        left: 490px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 180px;
@@ -703,8 +696,8 @@ a:hover, a:active {
     .character-creation {
         font-family: "Times New Roman";
         position: absolute;
-        top: 59.5%; /* Adjust this value to move the music library button vertically */
-        left: 5.3%; /* Adjust this value to move the contact me button horizontally */
+        top: 70%; /* Adjust this value to move the music library button vertically */
+        left: 5%; /* Adjust this value to move the contact me button horizontally */
         align-items: center;
         color:#fd77fe;
     }
@@ -713,7 +706,7 @@ a:hover, a:active {
     .information-bank {
         font-family: "Times New Roman";
         position: absolute;
-        top: 73%; /* Adjust this value to move the cinematic art museum button vertically */
+        top: 82.9%; /* Adjust this value to move the cinematic art museum button vertically */
         left: 5%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
         align-items: center;
@@ -722,7 +715,7 @@ a:hover, a:active {
     .mercury1 {
         z-index: 0;/* Ensure it appears below the art frame */
         top: 800px;
-        left: 87px;
+        left: 100px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 180px;
@@ -731,7 +724,7 @@ a:hover, a:active {
 
     .mercury2 {
         top: 800px;
-        left: 580px;
+        left: 570px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 180px;
@@ -742,8 +735,8 @@ a:hover, a:active {
     .mini-games {
         font-family: "Times New Roman";
         position: absolute;
-        top: 86.7%; /* Adjust this value to move the boutique button vertically */
-        left: 5.1%; /* Adjust this value to move the contact me button horizontally */
+        top: 96%; /* Adjust this value to move the boutique button vertically */
+        left: 5%; /* Adjust this value to move the contact me button horizontally */
         color:#fd77fe;
         align-items: center;
     }
@@ -751,7 +744,7 @@ a:hover, a:active {
     .mars1 {
         z-index: 0;/* Ensure it appears below the art frame */
         top: 970px;
-        left: 130px;
+        left: 100px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 150px;
@@ -760,7 +753,7 @@ a:hover, a:active {
 
     .mars2 {
         top: 970px;
-        left: 530px;
+        left: 570px;
         position: absolute;
         filter: hue-rotate(712deg) brightness(140%);
         height: 150px;
@@ -772,15 +765,15 @@ a:hover, a:active {
         flex-direction: row;
         align-items: center;
         position: absolute;
-        bottom: 60%; /* Adjust this value to position the social links vertically */
-        left: 88.8%;
+        bottom: 55%; /* Adjust this value to position the social links vertically */
+        left: 55%;
         transform: translate(-50%, -50%);
-        width: 95%; /* Ensure it fits within the screen */
+        width: 88%; /* Ensure it fits within the screen */
     }
 
     .social-links a {
         margin: 0px 0; /* Adjust this value for spacing between the links */
-        width: 60px; /* Adjust this value to resize the social icons */
+        width: 150px; /* Adjust this value to resize the social icons */
         height: 40px; /* Maintain aspect ratio */
     }
 
