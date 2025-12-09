@@ -1,163 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head> <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <link rel="stylesheet" href="styles.css"/> <title>MAIN_MENU</title>
-        <script> function activateAI() { fetch('/activate-ai') .then(response =>
-    { if (!response.ok) { throw new Error('Network response was not ok'); }
-     return response.json(); }) .then(data => { if (data.success) { console.log('AI activated successfully'); }
-else { console.error('Failed to activate AI'); } }) .catch(error => { console.error('Error:', error); }); }
-        </script>
-    </head>
-    <body class="c1 doc-content"> <header class="header item"> <p><span class="title">The_Vigils_Keep</span></p>
-    </header>
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>MAIN_MENU</title>
+     <script>   
+        function activateAI() {
+            fetch('/activate-ai')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    console.log('AI activated successfully');
+                } else {
+                    console.error('Failed to activate AI');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</head>
 
-    <section class="contact">
+
+    
+<body class="c1 doc-content">
+    <div class="header item">
+        <p><span class="title">The_Vigils_Keep</span></p>
+    </div>
+
     <div class="enquiries">
-       <p>Call_Me: 0428 284 022</p>
+       <p>
+           Call_Me: 0428 284 022
+       </p>
     </div>
 
-    <div class="email">
-       <p>Email: Thevigilskeep@outlook.com</p>
-    </div>
-</section>
-
-<div class="shop item">
-    <p>
-        <a href="https://thevigilskeep.github.io/life.enterprises.au/shop.html" target="_blank" rel="noopener">
-            <img src="Shop.png" alt="Shop" width="500" height="500" class="shop"/>
-        </a>
-    </p>
-</div>
-
-<div class="forum item">
-    <p>
-        <a href="https://thevigilskeep.github.io/life.enterprises.au/shop.html" target="_blank" rel="noopener">
-            <img src="Forum.png" alt="Forum" width="470" height="500" class="forum"/>
-        </a>
-    </p>
-</div>
-
-<div class="trademark item">
-    <p>
-        <a href="javascript:activateAI();" aria-label="Activate AI">
-            <img src="Trademark.gif" alt="Trademark" width="500" height="500" class="trademark"/>
-        </a>
-    </p>
-</div>
-
-<div class="container item">
-    <p>
-        <a href="https://thevigilskeep.github.io/life.enterprises.au/profile.html" target="_blank" rel="noopener">
-            <img src="my pfp.jpg" alt="Profile" width="500" height="480" class="profile-image"/>
-            <img src="ROSE_GOLD_FRAME.png" alt="Art frame" width="420" height="450" class="art-frame"/>
-        </a>
-    </p>
-</div>
-
-<div class="venus" style="position: absolute; left: 0; top: 0;">
-    <div class="venus1">
-        <img src="Venus.png" alt="Venus 1" width="500" height="480" class="venus1"/>
-    </div>
-    <div class="venus2">
-        <img src="Venus.png" alt="Venus 2" width="500" height="480" class="venus2"/>
-    </div>
-</div>
-
-<div class="container item gallery">
-    <p>
-        <a href="https://thevigilskeep.github.io/life.enterprises.au/art_museum.html" target="_blank" rel="noopener">
-            Art_Museum <!-- Insert gallery button here -->
-        </a>
-    </p>
-</div>
-
-<div class="neptune" style="position: absolute; left: 0; top: 0;">
-    <div class="neptune1">
-        <img src="Neptune.png" alt="Neptune 1" width="500" height="480" class="neptune1"/>
-    </div>
-    <div class="neptune2">
-        <img src="Neptune.png" alt="Neptune 2" width="500" height="480" class="neptune2"/>
-    </div>
-</div>
-
-<div class="container item character-creation">
-    <p>
-        <a href="https://thevigilskeep.github.io/life.enterprises.au/character%20creation.html" target="_blank" rel="noopener">
-            Character_Creation <!-- Insert character creation button here -->
-        </a>
-    </p>
-</div>
-
-<div class="mercury" style="position: absolute; left: 0; top: 0;">
-    <div class="mercury1">
-        <img src="Mercury.png" alt="Mercury 1" width="500" height="480" class="mercury1"/>
-    </div>
-    <div class="mercury2">
-        <img src="Mercury.png" alt="Mercury 2" width="500" height="480" class="mercury2"/>
-    </div>
-</div>
-
-<div class="container item information-bank">
-    <p>
-        <a href="https://thevigilskeep.github.io/life.enterprises.au/information%20bank.html" target="_blank" rel="noopener">
-            Information_Bank <!-- Insert information bank button here -->
-        </a>
-    </p>
-</div>
-
-<div class="mars" style="position: absolute; left: 0; top: 0;">
-    <div class="mars1">
-        <img src="Mars.png" alt="Mars 1" width="500" height="480" class="mars1"/>
-    </div>
-    <div class="mars2">
-        <img src="Mars.png" alt="Mars 2" width="500" height="480" class="mars2"/>
-    </div>
-</div>
-
-<div class="container item mini-games">
-    <p>
-        <a href="https://thevigilskeep.github.io/life.enterprises.au/mini%20games.html" target="_blank" rel="noopener">
-            Mini_Games <!-- Insert mini games button here -->
-        </a>
-    </p>
-</div>
-
-<nav class="social-links" aria-label="Social links">
-    <div class="insta">
-        <a href="https://www.instagram.com/the_vigils_keep/" target="_blank" rel="noopener">
-            <img src="Insta.png" alt="Instagram"/>
-        </a>
+        <div class="email">
+       <p>
+           Email: Thevigilskeep@outlook.com
+       </p>
     </div>
 
-    <div class="youtube">
-        <a href="https://www.youtube.com/@The_Vigil_Creature" target="_blank" rel="noopener">
-            <img src="Youtube.png" alt="YouTube"/>
-        </a>
+
+    
+        <div class="shop">
+        <p>
+            <a href="https://thevigilskeep.github.io/life.enterprises.au/shop.html">
+                <img src="Shop.png" width="500px" height="500px" class="shop"/> <!-- Adjust the size and position as needed -->
+        </p> </a>
     </div>
 
-    <div class="discord">
-        <a href="https://discord.gg/dA6KQErGMX" target="_blank" rel="noopener">
-            <img src="Discord.png" alt="Discord"/>
-        </a>
+        <div class="forum">
+        <p>
+            <a href="https://thevigilskeep.github.io/life.enterprises.au/shop.html">
+                <img src="Forum.png" width="470px" height="500px" class="forum"/> <!-- Adjust the size and position as needed -->
+        </p> </a>
     </div>
 
-    <div class="threads">
-        <a href="https://www.threads.net/@the_vigils_keep" target="_blank" rel="noopener">
-            <img src="Threads.png" alt="Threads"/>
-        </a>
+            <div class="trademark">
+        <p>
+            <a href="javascript:activateAI();">
+                <img src="Trademark.gif" width="500px" height="500px" class="trademark"/> <!-- Adjust the size and position as needed -->
+        </p> </a>
     </div>
 
-    <div class="tumblr">
-        <a href="https://www.tumblr.com/blog/the-vigils-keep" target="_blank" rel="noopener">
-            <img src="Tumblr.png" alt="Tumblr"/>
-        </a>
+
+    
+    <div class="container item">
+        <p>
+            <a href="https://thevigilskeep.github.io/life.enterprises.au/profile.html">
+                <img src="my pfp.jpg" width="500px" height="480px" class="profile-image"/> <!-- Adjust the size and position as needed -->
+            
+            <img src="ROSE_GOLD_FRAME.png" width="420px" height="450px" class="art-frame"/> <!-- Adjust the size and position as needed -->
+        </p> </a>
+    </div>
+    
+
+   <div class="venus" style="
+    position: absolute;
+    left: 0px;
+    top: 0px;
+">
+
+       
+      <div class="venus1">
+        <p>
+                <img src="Venus.png" width="500px" height="480px" class="venus1">
+        </p>
     </div>
 
-    <div class="soundcloud">
-        <a href="https://soundcloud.com/user-942326157" target="_blank" rel="noopener">
-            <img src="Soundcloud.png" alt="SoundCloud"/>
-        </a>
+      <div class="venus2">
+        <p>
+                <img src="Venus.png" width="500px" height="480px" class="venus2">
+        </p>
     </div>
-</nav>
+          
+      </div>
+    
+
+    <div class="container item gallery">
+        <p>
+            <a href="https://thevigilskeep.github.io/life.enterprises.au/art_museum.html">
+                Art_Museum </* Insert gallery button here */>
+            </a>
+        </p>
+    </div>
+    
+
+      <div class="neptune" style="
+    position: absolute;
+    left: 0px;
+    top: 0px;
+">
+    
+      <div class="neptune1">
+        <p>
+                <img src="Neptune.png" width="500px" height="480px" class="neptune1"/>
+        </p>
+    </div>
+
+      <div class="neptune2">
+        <p>
+                <img src="Neptune.png" width="500px" height="480px" class="neptune2"/>
+        </p>
+    </div>
+
+      </div>
+    
+    
+    <div class="container item character-creation">
+        <p>
+            <a href="https://thevigilskeep.github.io/life.enterprises.au/character creation.html">
+                Character_Creation </* Insert music library button here */>
+            </a>
+        </p>
+    </div>
+    
+
+        <div class="mercury" style="
+    position: absolute;
+    left: 0px;
+    top: 0px;
+">
+            
+        <div class="mercury1">
+          <p>
+                <img src="Mercury.png" width="500px" height="480px" class="mercury1"/>
+        </p>
+    </div>
+
+      <div class="mercury2">
+        <p>
+                <img src="Mercury.png" width="500px" height="480px" class="mercury2"/>
+        </p>
+    </div>
+
+        </div>
+    
+
+    <div class="container item information-bank">
+        <p>
+            <a href="https://thevigilskeep.github.io/life.enterprises.au/information bank.html">
+                Information_Bank </* Insert cinematic art museum button here */>
+            </a>
+        </p>
+    </div>
+    
+
+        <div class="mars" style="
+    position: absolute;
+    left: 0px;
+    top: 0px;
+">
+      
+      <div class="mars1">
+        <p>
+                <img src="Mars.png" width="500px" height="480px" class="mars1"/>
+        </p>
+    </div>
+
+      <div class="mars2">
+        <p>
+                <img src="Mars.png" width="500px" height="480px" class="mars2"/>
+        </p>
+    </div>
+
+        </div>
+    
+    <div class="container item mini-games">
+        <p>
+            <a href="https://thevigilskeep.github.io/life.enterprises.au/mini games.html">
+                Mini_Games </* Insert boutique button here */>
+            </a>
+        </p>
+    </div>
+
+        </div>
+
+    
+        <div class="social-links">
+
+            <div class="insta">
+        <a href="https://www.instagram.com/the_vigils_keep/" target="_blank">
+                <img src="Insta.png"/> </a>
+            </div>
+
+            <div class="youtube">
+        <a href="https://www.youtube.com/@The_Vigil_Creature" target="_blank">
+                <img src="Youtube.png"/> </a>
+            </div>
+
+            <div class="discord">
+        <a href="https://discord.gg/dA6KQErGMX" target="_blank">
+                <img src="Discord.png"/> </a>
+            </div>
+
+            <div class="threads">
+        <a href="https://www.threads.net/@the_vigils_keep" target="_blank">
+                <img src="Threads.png"/> </a>
+            </div>
+
+            <div class="tumblr">
+        <a href="https://www.tumblr.com/blog/the-vigils-keep" target="_blank">
+                <img src="Tumblr.png"/> </a>
+            </div>
+
+                <div class="soundcloud">
+        <a href="https://soundcloud.com/user-942326157" target="_blank">
+                <img src="Soundcloud.png"/> </a>
+    </div>
+    
+</body>
+</html>
