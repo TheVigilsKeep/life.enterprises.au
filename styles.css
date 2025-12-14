@@ -88,27 +88,27 @@ body, html {
 }
 
 .insta {
-        filter: hue-rotate(690deg) brightness(1.2);
+filter: hue-rotate(708deg) brightness(1.2);
 }
 
 .youtube {
-filter: hue-rotate(709deg);
+filter: hue-rotate(727deg);
 }
 
 .discord {
-filter: hue-rotate(690deg) brightness(1);
+filter: hue-rotate(714deg) brightness(1.1);
 }
 
 .threads {
-filter: hue-rotate(690deg) brightness(1.2);
+filter: hue-rotate(712deg) brightness(1.2);
 }
 
 .tumblr {
-filter: hue-rotate(713deg) brightness(1);
+filter: hue-rotate(726deg) brightness(1);
 }
 
 .soundcloud {
-filter: hue-rotate(710deg) brightness(1);
+filter: hue-rotate(730deg) brightness(1);
 }
 
 /* Menu Links (Gallery, Character_Creation, etc.) */
