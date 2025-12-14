@@ -87,6 +87,30 @@ body, html {
     filter: hue-rotate(24deg) brightness(160%) saturate(55%);
 }
 
+.insta {
+        filter: hue-rotate(690deg) brightness(1.2);
+}
+
+.youtube {
+filter: hue-rotate(709deg);
+}
+
+.discord {
+filter: hue-rotate(690deg) brightness(1);
+}
+
+.threads {
+filter: hue-rotate(690deg) brightness(1.2);
+}
+
+.tumblr {
+filter: hue-rotate(713deg) brightness(1);
+}
+
+.soundcloud {
+filter: hue-rotate(710deg) brightness(1);
+}
+
 /* Menu Links (Gallery, Character_Creation, etc.) */
 .gallery p a, .character-creation p a, .information-bank p a, .mini-games p a {
     font-family: "Times New Roman", serif;
