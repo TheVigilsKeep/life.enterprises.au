@@ -223,7 +223,7 @@ body, html {
     }
 }
 
-/* === 3. DESKTOP/1024p (1024px and up) --- (Complex layout remains as defined previously) */
+/* === 2. DESKTOP/1024p (1024px and up) --- (Complex layout remains as defined previously) */
 @media screen and (min-width: 1024px) {
     /* * NOTE: To use the complex absolute positioning for desktop, 
      * you will need to re-implement those styles here using percentage 
@@ -231,3 +231,4 @@ body, html {
      * to make this possible.
      */
 }
+
