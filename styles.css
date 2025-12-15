@@ -88,6 +88,11 @@ body, html {
     max-height: 90px;
 }
 
+.forum {
+   width: 50%;
+   height: 50%;
+}
+
 /* --- Social Links --- */
 .social-links {
     display: flex;
@@ -231,4 +236,5 @@ body, html {
      * to make this possible.
      */
 }
+
 
