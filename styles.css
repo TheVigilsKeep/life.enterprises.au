@@ -1,6 +1,7 @@
 /* === BASE STYLES: MOBILE-FIRST (240px - 599px) === */
 
 body, html {
+    left: -20;
     margin: 0;
     padding: 0;
     width: 99%;
