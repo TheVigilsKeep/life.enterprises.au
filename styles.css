@@ -3,17 +3,17 @@
 body, html {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 99%;
     min-height: 100vh; /* Minimum page height for flow */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     background-color: black;
     /* Apply any necessary background images/properties to the body */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative; 
+    position: relative;
 }
 
 /* --- Content Flow Containers --- */
@@ -22,9 +22,9 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%; 
+    width: 90%;
     max-width: 500px; /* Small screen cap */
-    margin: 10px auto; 
+    margin: 10px auto;
     box-sizing: border-box;
     text-align: center;
 }
@@ -36,6 +36,8 @@ body, html {
     text-align: center;
     z-index: 100;
     position: relative; /* Ensure children like enquiries are contained */
+    top: -245px;
+    right: -49px;
 }
 
 /* --- Typography & Links --- */
@@ -60,29 +62,29 @@ body, html {
 
 .profile {
     display: block !important; /* Re-enable the profile container */
-    width: 70%; /* Smaller on mobile */
-    max-width: 150px;
+    /* width: 73; */ /* Smaller on mobile */
+    /* max-width: 150px; */
     margin: 20px auto;
     text-align: center;
     position: relative;
-    order: 2; /* Place it after the header */
+    /* order: 2; */ /* Place it after the header */
 }
 
 .pfp {
     display: block !important; /* Re-enable the profile picture */
-    width: 90%;
-    height: 90%;
+    width: 130px;
+    height: 20%;
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
     left: 7px;
 }
 
 .art-frame {
     display: block !important; /* Re-enable the frame */
-    position: absolute;
-    width: 100%; /* Frame covers the entire profile container area */
-    height: 100%;
-    top: -5%;
+    position: relative;
+    width: 106%; /* Frame covers the entire profile container area */
+    height: 21.3%;
+    /* top: 2%; */
     z-index: 3; /* Frame should be on top of the pfp (if frame has transparency) */
     filter: hue-rotate(24deg) brightness(160%) saturate(55%);
 }
@@ -124,12 +126,41 @@ filter: hue-rotate(730deg) brightness(1);
     color: darkred;
 }
 
+.venus {
+    display: block !important; /* Re-enable the venus container */
+    position: absolute;
+}
+
+.venus1 {top: 55px;left: -55px;width: 100%;}
+
+.venus2 {position:relative;top: -36px;right: -105px;}
+
+/* Planet Images (The .venus1, .neptune1, etc.) */
+.venus1, .neptune1, .mercury1, .mars1 {
+    display: block !important; /* Show the first image */
+     /* Standard size for mobile */
+    height: 150px;
+    position: relative;
+}
+.venus1 img, .neptune1 img, .mercury1 img, .mars1 img {
+    width: 30%;
+    height: 50%;
+}
+
+/* Planet Images (The .venus1, .neptune1, etc.) */
+.venus2, .neptune2, .mercury2, .mars2 {
+    display: block !important; /* Show the first image */
+     /* Standard size for mobile */
+    height: 152px;
+    position: relative;
+}
+.venus2 img, .neptune2 img, .mercury2 img, .mars2 img {
+    width: 30%;
+    height: 50%;
+}
+
 /* Hiding complex, absolutely positioned decorative elements on mobile */
-.misc, .menu, 
-.venus, .venus1, .venus2, 
-.neptune, .neptune1, .neptune2, 
-.mercury, .mercury1, .mercury2, 
-.mars, .mars1, .mars2 {
+.misc, {
     display: none !important; /* Force hide to simplify mobile layout */
 }
 
@@ -141,7 +172,6 @@ filter: hue-rotate(730deg) brightness(1);
     align-items: center;
     width: 90%;
     padding: 15px 0;
-    margin-top: 20px;
     position: relative;
 }
 
