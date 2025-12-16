@@ -207,7 +207,7 @@ body, html {
 
     .misc {
         max-width: 150px;
-        height: 250px; 
+        height: 250px;
         margin-left: 20px;
     }
     .misc img {
@@ -236,5 +236,38 @@ body, html {
      * to make this possible.
      */
 }
+    .title { font-size: 6vw; }
 
+    /* Redefine profile/misc layout for more space */
+    .profile-and-misc {
+        width: 600px;
+        margin: 40px auto;
+    }
+    
+    .profile {
+        max-width: 250px;
+    }
 
+    .misc {
+        max-width: 120px;
+        height: 250px;
+        margin-left: 130px;
+        margin-bottom: -125px;
+    }
+    .misc img {
+        max-width: 70px; /* Larger icons on tablet */
+
+    }
+
+    /* Menu Text is now fixed size */
+    .container.item p a {
+        font-size: 28px; 
+    }
+    
+    /* Planet images are larger */
+    .planet-img-left, .planet-img-right {
+        width: 50px; 
+        height: 50px;
+        
+    }
+}
