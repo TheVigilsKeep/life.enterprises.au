@@ -335,10 +335,6 @@
             { id: 3, name: "???????#05", model: "", info: "" },
 
             { id: 4, name: "?????", model: "", info: "" },
-            { id: 5, name: "?????", model: "", info: "" },
-            { id: 6, name: "?????", model: "", info: "" },
-            { id: 7, name: "?????", model: "", info: "" },
-            { id: 8, name: "?????", model: "", info: "" },
 
             // ... fill the rest as needed. Defaults provided below.
         ];
@@ -353,7 +349,7 @@
         function updateDisplay(index) {
             // Find data or use default placeholder
             const charData = characters.find(c => c.id === index) || { 
-                name: "Locked_Character", 
+                name: "?????", 
                 model: "", 
                 info: "" 
             };
