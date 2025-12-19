@@ -1,459 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html><head>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="stylesheet" href="profile.css">
-  
-    <title>CHARACTER_SELECT</title>
-    <style>
-        /* === 1. CORE STYLES & VARIABLES === */
-        :root {
-            --theme-color: #fd77fe; /* Light Purple/Lavender from your image */
-            --bg-color: #000000;
-            --box-border: 3px solid var(--theme-color);
-            --box-radius: 15px; /* Soft rounded corners */
-            --glow: 0 0 10px #fd77fe5e;
-            --glow-active: 0 0 20px #fd77fe5e;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: #fd77fe;
-             /* Typewriter/Chalk style */
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden; /* Prevent scroll on desktop */
-        }
-
-        /* === 2. HEADER === */
-        .header {
-            text-align: center;
-            padding: 20px 0 10px 0;
-            flex-shrink: 0;
-        }
-
-        .title {
-            font-size: 3rem;
-            margin: 0;
-            text-shadow: var(--glow);
-        }
-
-        .subtitle {
-            font-size: 1.7rem;
-            margin-top: 30px;
-        }
-
-        /* === 3. MAIN LAYOUT (3 COLUMNS) === */
-        .main-stage {
-            display: flex;
-            flex: 1;
-            width: 95%;
-            justify-content: space-between;
-            align-items: center;
-            height: 70%; /* Occupy middle space */
-        }
-
-        /* --- COLUMN 1: THE GRID (LEFT) --- */
-        .col-left {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        /* The Grid Rows */
-        .grid-row {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        /* The Character Box */
-        .char-slot {
-            width: 50px;
-            height: 50px;
-            border: 2px solid var(--theme-color);
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            background-color: transparent;
-            /* Placeholder styling */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem; 
-        }
-
-        .char-slot:hover, .char-slot.active {
-            background-color: rgba(214, 157, 252, 0.2);
-            box-shadow: var(--glow-active);
-            transform: scale(1.1);
-        }
-
-        /* --- COLUMN 2: THE MODEL VIEWER (CENTER) --- */
-        .col-center {
-            flex: 1.5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end; /* Align closer to bottom platform */
-            position: relative;
-            height: 100%;
-        }
-
-        .model-preview {
-            width: 100%;
-            height: 80%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            margin-right: -70px;
-            z-index: 2;
-        }
-        
-        /* The Model Image Placeholder */
-        #center-model-img {
-            max-width: 80%;
-            max-height: 90%;
-            object-fit: contain;
-            filter: drop-shadow(0 0 10px var(--theme-color));
-        }
-
-        .coming-soon-text {
-            position: absolute;
-            top: 40%;
-            font-size: 2rem;
-            opacity: 0.5;
-            z-index: 1;
-        }
-
-        /* The Glowing Ring Platform */
-        .platform {
-            width: 200px;
-            height: 40px;
-            border: 4px solid var(--theme-color);
-            border-radius: 50%;
-            box-shadow: var(--glow), inset var(--glow);
-            transform: perspective(500px) rotateX(20deg);
-            margin-right: -70px;
-        }
-
-        /* --- COLUMN 3: INFO BOX (RIGHT) --- */
-        .col-right {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .name-display {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            min-height: 2.5rem; /* Reserve space */
-            text-align: center;
-        }
-
-        .info-box {
-            width: 80%;
-            height: 300px;
-            border: 4px solid var(--theme-color);
-            /* Creating the 'chalk' rough border effect via simple dashed/solid mix or SVG */
-            border-style: solid; 
-            border-radius: 5px;
-            box-shadow: var(--glow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: rgba(0,0,0,0.5);
-        }
-
-        #right-info-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.8;
-        }
-
-        /* === 4. FOOTER === */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            flex-shrink: 0;
-        }
-
-        .return-link {
-            color: var(--theme-color);
-            text-decoration: none;
-            font-size: 1.2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: pointer;
-        }
-        
-        .arrow-down {
-            font-family: "Arial";
-            font-size: 2rem;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {/* transform: translateY(0); */}
-            40% {/* transform: translateY(-10px); */}
-            60% {transform: translateY(-5px);}
-        }
-
-        /* ========================================= */
-        /* === RESPONSIVE STYLES === */
-        /* ========================================= */
-
-        /* TABLET (600px - 1023px) */
-        @media screen and (max-width: 1023px) {
-            .char-slot { width: 40px; height: 40px; }
-            .platform { width: 150px; }
-            .info-box { height: 200px; }
-            .title { font-size: 2.5rem; }
-        }
-
-        /* MOBILE (240px - 599px) - STACKED LAYOUT */
-        @media screen and (max-width: 599px) {
-            body {
-                overflow-y: auto; /* Allow scrolling on mobile */
-                height: auto;
-            }
-
-            .main-stage {
-                flex-direction: column;
-                height: auto;
-                padding-bottom: 50px;
-            }
-
-            /* Reorder: 1. Preview (Center) 2. Name/Info (Right) 3. Grid (Left) */
-            .col-center { order: 1; height: 300px; margin-bottom: 20px; width: 100%; }
-            .col-right  { order: 2; margin-bottom: 30px; width: 100%; }
-            .col-left   { order: 3; width: 100%; }
-
-            .coming-soon-text { display: none; }
-            
-            .info-box {
-                width: 90%;
-                height: 150px;
-            }
-            
-            .char-slot {
-                width: 45px;
-                height: 45px; /* Bigger touch targets */
-            }
-            
-            /* Hide the visual platform ring on mobile to save space? Or keep small */
-            .platform { display: none; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="header">
-        <h1 class="title">Character_Select</h1>
-        <div class="subtitle">Choose your Character</div>
-    </div>
-
-    <div class="main-stage">
-        
-        <div class="col-left" id="grid-container">
-            <div class="grid-row">
-                <div class="char-slot" tabindex="0" data-id="0"></div>
-            </div>
-            <div class="grid-row">
-                <div class="char-slot" tabindex="0" data-id="1"></div>
-                <div class="char-slot" tabindex="0" data-id="2"></div>
-                <div class="char-slot" tabindex="0" data-id="3"></div>
-            </div>
-            <div class="grid-row">
-                <div class="char-slot" tabindex="0" data-id="4"></div>
-                <div class="char-slot" tabindex="0" data-id="5"></div>
-                <div class="char-slot" tabindex="0" data-id="6"></div>
-                <div class="char-slot" tabindex="0" data-id="7"></div>
-                <div class="char-slot" tabindex="0" data-id="8"></div>
-            </div>
-             <div class="grid-row">
-                <div class="char-slot" tabindex="0" data-id="9"></div>
-                <div class="char-slot" tabindex="0" data-id="10"></div>
-                <div class="char-slot" tabindex="0" data-id="11"></div>
-                <div class="char-slot" tabindex="0" data-id="12"></div>
-                <div class="char-slot" tabindex="0" data-id="13"></div>
-            </div>
-             <div class="grid-row">
-                <div class="char-slot" tabindex="0" data-id="14"></div>
-                <div class="char-slot" tabindex="0" data-id="15"></div>
-                <div class="char-slot" tabindex="0" data-id="16"></div>
-                <div class="char-slot" tabindex="0" data-id="17"></div>
-                <div class="char-slot" tabindex="0" data-id="18"></div>
-            </div>
-        </div>
-
-        <div class="col-center">
-            <div class="model-preview">
-                <div class="coming-soon-text">Coming soon</div>
-                <img id="center-model-img" src="" alt="" style="display:none;">
-            </div>
-            <div class="platform"></div>
-        </div>
-
-        <div class="col-right">
-            <div class="name-display" id="char-name">Insert name here</div>
-            <div class="info-box">
-                <img id="right-info-img" src="" alt="Character Info" style="display:none;">
-            </div>
-        </div>
-
-    </div>
-
-    <div class="footer">
-        <a href="index.html" class="return-link">
-            Return to Main Menu
-            <span class="arrow-down">V</span>
-        </a>
-    </div>
-
+    <link rel="stylesheet" href="styles.css">
+    <title>MAIN_MENU</title>
     <script>
-        // 1. DATA CONFIGURATION
-        // Define your characters here. ID matches the data-id in HTML grid.
-        // Use blank strings "" for placeholders if you don't have images yet.
-        const characters = [
-            { id: 0, name: "PR0+0C0L", model: "", info: "" },
-            
-            { id: 1, name: "?????????", model: "", info: "" },
-            { id: 2, name: "Vigil_Creature", model: "", info: "" },
-            { id: 3, name: "???????#05", model: "", info: "" },
-
-            { id: 4, name: "?????", model: "", info: "" },
-
-            // ... fill the rest as needed. Defaults provided below.
-        ];
-
-        // 2. DOM ELEMENTS
-        const slots = document.querySelectorAll('.char-slot');
-        const nameDisplay = document.getElementById('char-name');
-        const centerImg = document.getElementById('center-model-img');
-        const rightImg = document.getElementById('right-info-img');
-
-        // 3. UPDATE FUNCTION
-        function updateDisplay(index) {
-            // Find data or use default placeholder
-            const charData = characters.find(c => c.id === index) || { 
-                name: "?????", 
-                model: "", 
-                info: "" 
-            };
-
-            // Update Name
-            nameDisplay.textContent = charData.name;
-
-            // Update Center Model
-            if(charData.model) {
-                centerImg.src = charData.model;
-                centerImg.style.display = 'block';
-            } else {
-                centerImg.style.display = 'none'; // Show "Coming Soon" text
-            }
-
-            // Update Right Info Box
-            if(charData.info) {
-                rightImg.src = charData.info;
-                rightImg.style.display = 'block';
-            } else {
-                rightImg.style.display = 'none';
-            }
-
-            // Highlight Grid Box
-            slots.forEach(s => s.classList.remove('active'));
-            const activeSlot = document.querySelector(`.char-slot[data-id="${index}"]`);
-            if(activeSlot) activeSlot.classList.add('active');
+        function activateAI() {
+            fetch('/activate-ai')
+            /* ... (rest of function unchanged) ... */
         }
-
-        // 4. MOUSE & TOUCH INTERACTION
-        slots.forEach(slot => {
-            const id = parseInt(slot.getAttribute('data-id'));
-            
-            // Mouse Hover
-            slot.addEventListener('mouseover', () => {
-                updateDisplay(id);
-                currentFocusIndex = id; // Sync keyboard state
-            });
-
-            // Touch / Click
-            slot.addEventListener('click', () => {
-                updateDisplay(id);
-                currentFocusIndex = id;
-            });
-        });
-
-        // 5. KEYBOARD ARROW NAVIGATION
-        // We map the grid structure manually for perfect navigation
-        // Grid Structure: [1 box], [3 boxes], [5 boxes], [5 boxes], [5 boxes]
-        // Indices:
-        // Row 0: 0
-        // Row 1: 1, 2, 3
-        // Row 2: 4, 5, 6, 7, 8
-        // Row 3: 9, 10, 11, 12, 13
-        // Row 4: 14, 15, 16, 17, 18
-
-        let currentFocusIndex = 0;
-
-        document.addEventListener('keydown', (e) => {
-            // Prevent default scrolling for arrow keys
-            if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
-                e.preventDefault();
-            }
-
-            let nextIndex = currentFocusIndex;
-
-            // --- NAVIGATION LOGIC ---
-            // RIGHT
-            if (e.code === 'ArrowRight') {
-                nextIndex++;
-                if (nextIndex > 18) nextIndex = 0; // Loop to start
-            }
-            // LEFT
-            if (e.code === 'ArrowLeft') {
-                nextIndex--;
-                if (nextIndex < 0) nextIndex = 18; // Loop to end
-            }
-            // DOWN (Simple +width logic approximation)
-            if (e.code === 'ArrowDown') {
-                if (currentFocusIndex === 0) nextIndex = 2; // Top to middle of 2nd row
-                else if (currentFocusIndex >= 1 && currentFocusIndex <= 3) nextIndex = currentFocusIndex + 3 + (currentFocusIndex - 1); // 2->6 roughly
-                else nextIndex = currentFocusIndex + 5; 
-                
-                if (nextIndex > 18) nextIndex = 18; // Clamp bottom
-            }
-            // UP
-            if (e.code === 'ArrowUp') {
-                if (currentFocusIndex >= 4) nextIndex = currentFocusIndex - 5;
-                else if (currentFocusIndex >= 1) nextIndex = 0; // 2nd row to top
-                else nextIndex = 0; // Clamp top
-            }
-
-            // Apply Change
-            if(nextIndex !== currentFocusIndex) {
-                currentFocusIndex = nextIndex;
-                updateDisplay(currentFocusIndex);
-            }
-        });
-
-        // Initialize first box
-        updateDisplay(0);
-
     </script>
-</body>
-</html>
+</head>
+<body class="c1 doc-content" inmaintabuse="1">
+    
+    <div class="header item">
+        <div class="title">The_Vigil's_Keep</div>
+        <div class="enquiries"><p>Call_Me: 0428 731 806</p></div>
+        <div class="email"><p>Email: Thevigilskeep@outlook.com</p></div>
+    </div>
+    
+    <div class="misc" style="
+    right: -170px;
+    top: -35px;
+    position: relative;
+">
+        <div class="shop" style="
+">
+            <a href="https://thevigilskeep.github.io/life.enterprises.au/shop.html">
+                <img src="Shop.png" alt="Shop" width="100%">
+            </a>
+        </div>
+        <div class="trademark">
+            <a href="javascript:activateAI();">
+                <img src="Trademark.gif" width="500px" height="500px" class="trademark">
+            </a>
+        </div>
+        <div class="forum" style="
+">
+            <a href="https://thevigilskeep.github.io/life.enterprises.au/shop.html" style="
+    position: relative;
+    width: 100;
+">
+                <img src="Forum.png" width="470px" height="500px" class="forum" style="
+    right: -4px;
+    position: relative;
+">
+            </a>
+        </div>
+    </div>
+
+    <div class="profile" style="
+    top: -130px;
+    right: -10px;
+">
+        <img src="my pfp.jpg" class="pfp">
+        <a href="profile.html"><img src="ROSE_GOLD_FRAME.png" class="art-frame"></a>
+    </div>
+
+    <div class="social-links" style="
+    top: -100;
+">
+        <div class="insta" style="
+    color: #fd77fe;
+"><a href="https://www.instagram.com/the_vigils_keep/" target="_blank"><img src="Insta.png"></a></div>
+        <div class="youtube"><a href="https://www.youtube.com/@The_Vigil_Creature" target="_blank"><img src="Youtube.png"></a></div>
+        <div class="discord"><a href="https://discord.gg/nZuy7vyK3T" target="_blank"><img src="Discord.png"></a></div>
+        <div class="threads"><a href="https://www.threads.net/@the_vigils_keep" target="_blank"><img src="Threads.png"></a></div>
+        <div class="tumblr"><a href="https://www.tumblr.com/blog/the-vigils-keep" target="_blank"><img src="Tumblr.png"></a></div>
+        <div class="soundcloud"><a href="https://soundcloud.com/user-942326157" target="_blank"><img src="Soundcloud.png"></a></div>
+    </div>
+
+    <div class="menu" style="
+    top: -50px;
+    position: relative;
+">
+        
+        <div class="venus planet-group">
+            <div class="venus1 planet-img-left" style="
+    width: 40px;
+"><img src="Venus.png"></div>
+            <div class="container item gallery"><p><a href="art_museum.html">Art_Museum</a></p></div>
+            <div class="venus2 planet-img-right" style="width: 40px;"><img src="Venus.png"></div>
+        </div><div class="neptune planet-group" style="
+">
+            <div class="neptune1 planet-img-left" style="
+    height: 50px;
+"><img src="Neptune.png"></div>
+            <div class="container item character-creation"><p><a href="character creation.html">Character_Creation</a></p></div>
+            <div class="neptune2 planet-img-right" style="
+    height: 50px;
+"><img src="Neptune.png"></div>
+        </div><div class="mercury planet-group" style="
+">
+            <div class="mercury1 planet-img-left" style="
+    height: 55px;
+    width: 45px;
+"><img src="Mercury.png" style="
+"></div>
+            <div class="container item information-bank"><p><a href="information bank.html">Information_Bank</a></p></div>
+            <div class="mercury2 planet-img-right" style="
+    height: 55px;
+    width: 45;
+"><img src="Mercury.png"></div>
+        </div>
+
+        
+        
+        
+        
+        <div class="mars planet-group">
+            <div class="mars1 planet-img-left"><img src="Mars.png"></div>
+            <div class="container item mini-games"><p><a href="mini games.html">Mini_Games</a></p></div>
+            <div class="mars2 planet-img-right"><img src="Mars.png"></div>
+        </div>
+
+    </div>
+<script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script></body></html>
