@@ -25,9 +25,11 @@
 
         /* === 2. HEADER === */
         .header {
-            text-align: center;
-            padding: 20px 0 10px 0;
-            flex-shrink: 0;
+        text-align: center;
+        padding: 20px 0 10px 0;
+        flex-shrink: 0;
+        justify-content: center;
+        display: flex;
         }
 
         .title {
@@ -36,8 +38,15 @@
         }
 
         .directory {
-            font-size: 1.7rem;
-            margin-top: 30px;
+font-size: 1.7rem;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 30px;
+    justify-content: space-around;
+    height: 32rem;
         }
 
         /* ===  FOOTER === */
@@ -48,7 +57,7 @@
             position: fixed; /* Positions the element relative to the browser window */
             bottom: 0;       /* Aligns the bottom edge of the element with the bottom of the window */
             left: 0;         /* Aligns the left edge (optional, for full width) */
-            width: 90%;     /* Makes the item span the full width of the page */
+            width: 97%;     /* Makes the item span the full width of the page */
             /* Add other styling like background-color, padding, etc. */
         }
 
