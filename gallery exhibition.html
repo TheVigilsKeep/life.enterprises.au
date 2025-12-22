@@ -1,14 +1,15 @@
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <style>
+    <style>
         /* === 1. CORE STYLES & VARIABLES === */
         :root {
-            --theme-color: #fd77fe; /* Light Purple/Lavender from your image */
+            --theme-color: #fd77fe;
             --bg-color: #000000;
             --box-border: 3px solid var(--theme-color);
-            --box-radius: 15px; /* Soft rounded corners */
+            --box-radius: 15px;
         }
 
         body {
@@ -16,227 +17,163 @@
             padding: 0;
             background-color: var(--bg-color);
             color: #fd77fe;
-             /* Typewriter/Chalk style */
             height: 100vh;
             display: flex;
             flex-direction: column;
-            overflow: hidden; /* Prevent scroll on desktop */
+            overflow: hidden; /* Strict one-page view */
         }
 
         /* === 2. HEADER === */
         .header {
-        text-align: center;
-        padding: 20px 0 10px 0;
-        flex-shrink: 0;
-        justify-content: center;
-        display: flex;
+            text-align: center;
+            padding: 10px 0;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
         }
 
         .title {
-            font-size: 3rem;
+            font-size: 2.5rem; /* Slightly reduced to save vertical space */
             margin: 0;
         }
 
+        /* === 3. GALLERY SCALING === */
+        .gallery {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 0; /* Important for flex child sizing */
+            width: 100%;
+        }
 
+        .art-rows {
+            width: 100%;
+            height: 25%; /* Controlled height instead of 50% to prevent overflow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-            .art-rows {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .art-piece {
+            width: 15.7rem;
+            height: 80%; /* Relative to art-rows */
+            border: 2px solid var(--theme-color);
+            border-style: solid;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 5px;
+        }
 
-            
-      .art-piece {
-           width: 15.7rem;
-           height: 100%;
-           border: 2px solid var(--theme-color);
-           border-style: solid;
-           border-radius: 5px;
-           display: flex;
-           justify-content: space-between;
-      }
+        .art-names {
+            justify-content: space-around;
+            display: flex;
+            height: 2rem; /* Fixed height for text areas */
+            width: 95vw;
+            font-size: 12px;
+        }
 
-
-.art-names {
-    justify-content: space-around;
-    display: flex;
-    height: 11rem;
-    width: 95vw;
-    font-size: 12px;
-}
-
-            
-        /* ===  FOOTER === */
+        /* === 4. FOOTER === */
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 10px;
             flex-shrink: 0;
-            position: fixed; /* Positions the element relative to the browser window */
-            bottom: 0;       /* Aligns the bottom edge of the element with the bottom of the window */
-            left: 0;         /* Aligns the left edge (optional, for full width) */
-            width: 97%;     /* Makes the item span the full width of the page */
-            /* Add other styling like background-color, padding, etc. */
+            width: 100%;
         }
 
         .return-link {
             color: var(--theme-color);
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             cursor: pointer;
         }
-        
+
         .arrow-down {
             font-family: "Arial";
-            font-size: 2rem;
+            font-size: 1.5rem;
             animation: bounce 2s infinite;
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {/* transform: translateY(0); */}
-            40% {/* transform: translateY(-10px); */}
-            60% {transform: translateY(-5px);}
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-5px); }
+            60% { transform: translateY(-3px); }
         }
 
-        /* ========================================= */
-        /* === RESPONSIVE STYLES === */
-        /* ========================================= */
+        /* === 5. RESPONSIVE STYLES === */
 
-        /* TABLET (600px - 1023px) */
+        /* TABLET / SMALL SCREENS */
         @media screen and (max-width: 1023px) {
-
-
-            .title { font-size: 2.5rem; }
+            .title { font-size: 2rem; }
+            .art-piece { width: 20%; }
         }
 
-        /* MOBILE (240px - 599px) - STACKED LAYOUT */
+        /* MOBILE (Standard) */
         @media screen and (max-width: 599px) {
-            body {
-                overflow-y: auto; /* Allow scrolling on mobile */
-                height: auto;
-            }
-directory {
-}
-</style>
+            .title { font-size: 1.5rem; }
+            .art-names { font-size: 10px; }
+            /* Force gallery to fit by scaling if necessary */
+            .gallery { transform: scale(0.9); transform-origin: center; }
+        }
 
-  
+        /* EXTRA SMALL MOBILE (240px) */
+        @media screen and (max-width: 320px) {
+            .title { font-size: 1.2rem; }
+            .art-piece { border-width: 1px; }
+            .art-names { font-size: 8px; }
+            /* Scaling down the entire gallery area to ensure it fits the tiny height */
+            .gallery { transform: scale(0.75); }
+            .footer { padding: 5px; }
+        }
+
+    </style>
     <title>GALLERY_EXHIBITION</title>
-
-    <style id="__web-inspector-hide-shortcut-style__">
-.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *
-{
-    visibility: hidden !important;
-}
-        
-</style></head><body inmaintabuse="1"><div class="header">
+</head>
+<body>
+    <div class="header">
         <h1 class="title">Gallery Exhibition</h1>
-
     </div>
-        
-        
 
+    <div class="gallery">
+        <div class="art-rows" style="bottom: -5%; position: relative;">
+            <div class="art-piece"><img src="" style="display:none;"></div>
+            <div class="art-piece"><img src="" style="display:none;"></div>
+            <div class="art-piece"><img src="" style="display:none;"></div>
+            <div class="art-piece"><img src="" style="display:none;"></div>
+        </div>
 
-<div class="gallery">
-    
-    <div class="art-rows" style="bottom: -20%;position: relative;">
+        <div class="art-names" style="bottom: -5%; position: relative;">
+            <div class="name-display" style="right: -2%;">ART_PIECE01</div>
+            <div class="name-display" style="right: -1%;">ART_PIECE02</div>
+            <div class="name-display" style="left: 1%;">ART_PIECE03</div>
+            <div class="name-display" style="left: 2%;">ART_PIECE04</div>
+        </div>
 
-    
-            <div class="art-piece">
-                <img id="art-piece" src="" style="display:none;">
-            </div>
+        <div class="art-rows" style="top: -5%; position: relative;">
+            <div class="art-piece"><img src="" style="display:none;"></div>
+            <div class="art-piece"><img src="" style="display:none;"></div>
+            <div class="art-piece"><img src="" style="display:none;"></div>
+            <div class="art-piece"><img src="" style="display:none;"></div>
+        </div>
 
+        <div class="art-names" style="top: -5%; position: relative;">
+            <div class="name-display" style="right: -2%;">ART_PIECE05</div>
+            <div class="name-display" style="right: -1%;">ART_PIECE06</div>
+            <div class="name-display" style="left: 1%;">ART_PIECE07</div>
+            <div class="name-display" style="left: 2%;">ART_PIECE08</div>
+        </div>
+    </div>
 
-                <div class="art-piece">
-                <img id="art-piece" src="" style="display:none;">
-            </div>
-
-
-    <div class="art-piece">
-                <img id="art-piece" src="" style="display:none;">
-            </div><div class="art-piece">
-                <img id="art-piece" src="" style="display:none;">
-            </div></div>
-
-<div class="art-names" style="bottom: -20%;position: relative;">
-
-    
-            <div class="name-display" id="art-names" style="
-    right: -5.6%;
-    position: relative;
-">ART_PIECE01</div><div class="name-display" id="art-names" style="
-    right: -3.5%;
-    position: relative;
-">ART_PIECE02</div><div class="name-display" id="art-names" style="
-    left: 1.5%;
-    position: relative;
-">ART_PIECE03</div><div class="name-display" id="art-names" style="
-    left: -0.6%;
-    position: relative;
-">ART_PIECE04</div>
-
-
-                
-
-
-    </div><div class="art-rows" style="top: -20%;position: relative;">
-
-    
-            <div class="art-piece">
-                <img id="art-piece" src="" style="display:none;">
-            </div>
-
-
-                <div class="art-piece" style="
-">
-                <img id="art-piece" src="" style="display:none;">
-            </div>
-
-
-    <div class="art-piece">
-                <img id="art-piece" src="" style="display:none;">
-            </div><div class="art-piece" style="
-    \: flex;
-">
-                <img id="art-piece" src="" style="display:none;">
-            </div></div><div class="art-names" style="top: -20%;position: relative;">
-
-    
-            <div class="name-display" id="art-names" style="
-    right: -5.9%;
-    position: relative;
-">ART_PIECE05</div><div class="name-display" id="art-names" style="
-    right: -3.6%;
-    position: relative;
-">ART_PIECE06</div><div class="name-display" id="art-names" style="
-    left: 1.5%;
-    position: relative;
-">ART_PIECE07</div><div class="name-display" id="art-names" style="
-    left: -2.6%;
-">ART_PIECE08</div>
-
-
-                
-
-
-    </div></div>
-
-
-    
-
-<div class="footer" style="">
+    <div class="footer">
         <a href="art_museum.html" class="return-link">
             ART_MUSEUM
             <span class="arrow-down">V</span>
         </a>
     </div>
-
-
-
-
-
-
-<script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script></body></html>
+</body>
+</html>
