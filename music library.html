@@ -162,7 +162,7 @@
         }
     </style>
 </head>
-<body>
+<body inmaintabuse="1">
 
     <audio id="mainAudio"></audio>
 
@@ -185,7 +185,7 @@
                 <div class="control-bar">
                     <button class="control-btn" onclick="togglePlay()" id="playBtn">▶</button>
                     <button class="control-btn" onclick="fastForward()">&gt;&gt;</button>
-                    <button class="control-btn" onclick="toggleLoop()" id="loopBtn">🔁</button>
+                    <button class="control-btn" onclick="toggleLoop()" id="loopBtn">🔁 PROJECT</button>
                     <button class="control-btn" id="dlBtn">📥</button>
                     <span id="longevityDisplay">00|00|00</span>
                 </div>
@@ -217,7 +217,7 @@
 
         function toggleLoop() {
             audio.loop = !audio.loop;
-            document.getElementById('loopBtn').innerText = audio.loop ? "🔁" : "🔁 PROJECT";
+            document.getElementById('loopBtn').innerText = audio.loop ? "🔁Song" : "🔁";
         }
         
         // Longevity update
@@ -229,4 +229,5 @@
         };
     </script>
 
-</body></html>
+
+<script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script></body></html>
