@@ -198,36 +198,6 @@
             Return to Main Menu <br><div class="exit">
     &gt;
 </div></div>
-    
-
-    <script>
-        // Keep all your previous JavaScript logic here (Search, Audio, TogglePlay, etc.)
-        const CONFIG = { downloadLocked: true, manualLongevity: "00|00|00" };
-        const audio = document.getElementById('mainAudio');
-        let isPlaying = false;
-
-        function togglePlay() {
-            if (audio.src) {
-                if (audio.paused) { audio.play(); document.getElementById('playBtn').innerText = "⏸"; }
-                else { audio.pause(); document.getElementById('playBtn').innerText = "▶"; }
-            }
-        }
-
-        function fastForward() { audio.currentTime += 1; }
-
-        function toggleLoop() {
-            audio.loop = !audio.loop;
-            document.getElementById('loopBtn').innerText = audio.loop ? "🔁Song" : "🔁";
-        }
-        
-        // Longevity update
-        audio.ontimeupdate = () => {
-            const mins = Math.floor(audio.currentTime / 60).toString().padStart(2, '0');
-            const secs = Math.floor(audio.currentTime % 60).toString().padStart(2, '0');
-            const ms = Math.floor((audio.currentTime % 1) * 100).toString().padStart(2, '0');
-            document.getElementById('longevityDisplay').innerText = `${mins}|${secs}|${ms}`;
-        };
-    </script>
 
 
 <script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script></body></html>
