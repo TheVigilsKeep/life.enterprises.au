@@ -188,10 +188,17 @@
             <div class="player-side">
                 <div class="now-playing-display" id="playingTitle">SONG<br>PLAYING</div>
                 <div class="control-bar">
-                    <button class="control-btn" onclick="togglePlay()" id="playBtn">▶</button>
-                    <button class="control-btn" onclick="fastForward()">&gt;&gt;</button>
-                    <button class="control-btn" onclick="toggleLoop()" id="loopBtn">🔁</button>
-                    <button class="control-btn" id="dlBtn">📥</button>
+                    <button class="control-btn" onclick="togglePlay()" id="playBtn"><img src="play.png" class="play">
+</button>
+                    <button class="control-btn" onclick="fastForward()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
+</button>
+                    <button class="control-btn" onclick="loop()" style="
+" id="loop-btn">
+        <img src="loop.png" class="loop"> 
+    </button>
+                    <button class="control-btn" id="dlBtn">
+<img src="download.png" class="download">
+</button>
                     <span id="longevityDisplay">00|00|00</span>
                 </div>
                 <div class="metadata-container" id="metadata">Select track...</div>
@@ -208,4 +215,5 @@
 
 
 
-<script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script></body></html>
+<script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script>
+</body></html>
