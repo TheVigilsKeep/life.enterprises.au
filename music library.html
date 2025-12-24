@@ -49,6 +49,7 @@
             display: flex;
             flex-direction: column;
             min-width: 0;
+            height: 100%; /* Fixes the parent height */
         }
 
         .search-container { border: var(--chalk-border); padding: 5px; margin-bottom: 5px; }
@@ -58,7 +59,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
-            gap: 8px;
+            gap: 10px;
             flex: 1;
         }
 
@@ -71,7 +72,36 @@
             text-align: center;
             font-size: 0.7rem;
             padding: 2px;
+            width:100%;
+            aspect-ratio: 1 / 1; /* Ensures boxes stay square while scrolling */
         }
+
+
+
+/* === CUSTOM SCROLLBAR === */
+.grid-scroll-container {
+    flex: 1;          /* Takes up remaining vertical space */
+    height: 0;        /* IMPORTANT: Forces the container to use flex height, not content height */
+    overflow-y: scroll; /* Forces scrollbar visibility */
+    overflow-x: hidden;
+    padding-right: 5px;
+    margin-top: 10px;
+}
+
+/* Optional: Style the scrollbar to match your pink theme */
+.grid-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+.grid-scroll-container::-webkit-scrollbar-thumb {
+    background: var(--theme-color);
+    border-radius: 4px;
+}
+.grid-scroll-container::-webkit-scrollbar-track {
+    background: #222;
+}
+
+
+
 
         /* === 4. RIGHT SIDE: PLAYER === */
         .player-side {
@@ -180,11 +210,17 @@
                     <input type="text" id="searchInput" class="search-bar" placeholder="Search bar">
                 </div>
                 <h1 style="font-size: 1.0rem;margin: 5px 0;">Music Library</h1>
-                <div class="music-grid" id="musicGrid">
-                    <div class="art-box"></div><div class="art-box"></div><div class="art-box"></div>
-                    <div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div></div>
+
+
+<div class="grid-scroll-container">
                     
-                </div>
+
+    
+                <div class="music-grid" id="musicGrid">
+                    <div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div>
+                    <div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div><div class="art-box"></div></div>
+                    
+                </div></div>
             </div>
 
             <div class="player-side">
@@ -221,7 +257,22 @@
 
 
 
+<script>
+        // Generate 25 boxes
+        const grid = document.getElementById('musicGrid');
+        for (let i = 1; i <= 25; i++) {
+            const box = document.createElement('div');
+            box.className = 'art-box';
+            box.innerText = i < 10 ? `ART_0${i}` : `ART_${i}`;
+            grid.appendChild(box);
+        }
+
+        // Placeholder functions for your buttons
+        function togglePlay() { console.log("Play/Pause Toggled"); }
+        function fastForward() { console.log("Skipping 1s"); }
+        function loop() { console.log("Loop Toggled"); }
+    </script>
 
 
-<script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script>
-</body></html>
+
+<script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script></body></html>
