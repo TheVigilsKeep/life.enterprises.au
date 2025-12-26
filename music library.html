@@ -49,7 +49,7 @@
             display: flex;
             flex-direction: column;
             min-width: 0;
-            height: 100%; /* Fixes the parent height */
+            height: 185%; /* Fixes the parent height */
         }
 
         .search-container { border: var(--chalk-border); padding: 5px; margin-bottom: 5px; }
@@ -113,19 +113,7 @@
             min-width: 0;
         }
 
-        .now-playing-display {
-    border: var(--chalk-border);
-    width: 100%;
-    height: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    bottom: -2.5%;
-    position: relative;
-        }
+
 
         .control-bar {
             width: 100%;
@@ -156,8 +144,9 @@
         .metadata-container::before { top: -3px; left: -3px; border-right: 0; border-bottom: 0; }
         .metadata-container::after { bottom: -3px; right: -3px; border-left: 0; border-top: 0; }
 
-        .socials-box { border: var(--chalk-border); width: 100%; padding: 8px; text-align: center; font-size: 0.7rem; }
+        .socials-box { border: var(--chalk-border); width: 100%; padding: 8px; text-align: center; font-size: 0.7rem; position: relative; bottom: -90%;}
 
+        
 
 .exit {
     font-size: 8vw;
