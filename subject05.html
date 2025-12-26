@@ -52,6 +52,29 @@
             height: 100%; /* Fixes the parent height */
         }
 
+        .search-container { border: var(--chalk-border); padding: 5px; margin-bottom: 5px; }
+        .search-bar { width: 100%; background: transparent; border: none; color: var(--theme-color); font-size: 1rem; outline: none; }
+        
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            flex: 1;
+        }
+
+        .art-box {
+            border: var(--chalk-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.7rem;
+            padding: 2px;
+            width: 90%;
+            aspect-ratio: 1 / 1; /* Ensures boxes stay square while scrolling */
+        }
 
 
 
@@ -90,7 +113,19 @@
             min-width: 0;
         }
 
-}
+        .now-playing-display {
+    border: var(--chalk-border);
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    bottom: -2.5%;
+    position: relative;
+        }
 
         .control-bar {
             width: 100%;
@@ -171,7 +206,9 @@
     <div id="main-wrapper">
         <div class="container">
             <div class="library-side">
-
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-bar" placeholder="Search bar">
+                </div>
                     <h1 style="font-size: 2rem;margin: 5px 0;">Subject#05</h1>
 
 
