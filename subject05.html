@@ -1,3 +1,145 @@
+<html lang="en">
+<head>
+<style>
+
+
+
+        /* === 1. CORE STYLES & VARIABLES === */
+        :root {
+            --theme-color: #fd77fe;
+            --bg-color: #000000;
+            --chalk-border: 2px solid var(--theme-color);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--theme-color);
+            font-family: "times-new-roman";
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Enforces "one-page" rule */
+        }
+
+        /* === 2. SCALABLE WRAPPER === */
+        #main-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex: 1;
+            min-height: 0; /* Prevents flex items from overflowing */
+        }
+
+        /* === 3. LEFT SIDE: LIBRARY === */
+        .library-side {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            height: 100%; /* Fixes the parent height */
+        }
+
+        /* === 4. RIGHT SIDE: PLAYER === */
+        .player-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 0;
+        }
+
+
+
+        .control-bar {
+            width: 100%;
+            border: var(--chalk-border);
+            border-radius: 50px;
+            padding: 8px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+
+        .control-btn { background: none; border: none; color: var(--theme-color); cursor: pointer; padding: 0; filter: hue-rotate(25deg);}
+
+
+
+        /* Corner Brackets */
+        .metadata-container::before, .metadata-container::after {
+            content: ""; position: absolute; width: 10px; height: 10px; border: 2px solid var(--theme-color);
+        }
+        .metadata-container::before { top: -3px; left: -3px; border-right: 0; border-bottom: 0; }
+        .metadata-container::after { bottom: -3px; right: -3px; border-left: 0; border-top: 0; }
+
+        .socials-box { border: var(--chalk-border); width: 100%; padding: 8px; text-align: center; font-size: 0.7rem; }
+
+
+.exit {
+    font-size: 8vw;
+    font-family: Arial;
+}
+
+        a {
+    text-decoration: none;
+    color: var(--theme);
+}
+        
+        .footer-nav { text-align: center; padding: 10px 0; flex-shrink: 0; font-size: 0.8rem; }
+
+        /* === 5. MEDIA QUERIES (FIT LOGIC) === */
+
+        /* TABLET (1023px) */
+        @media screen and (max-width: 1023px) {
+            .now-playing-display { font-size: 1rem; }
+            #main-wrapper { padding: 15px; }
+        }
+
+        /* MOBILE (599px) */
+        @media screen and (max-width: 599px) {
+            .container { gap: 10px; }
+            .art-box { font-size: 0.6rem; }
+            #main-wrapper { transform: scale(0.9); transform-origin: center; }
+        }
+
+        /* EXTRA SMALL (240px) */
+        @media screen and (max-width: 320px) {
+            #main-wrapper { 
+                transform: scale(0.55); 
+                transform-origin: center;
+                width: 180%; /* Expand width to compensate for scale down */
+                height: 180%;
+            }
+            .container { gap: 5px; }
+            .control-bar { padding: 4px; }
+        }
+    
+
+
+    
+</style>
+
+    
+</head>
+
+
+
+
 <body inmaintabuse="1">
 
     <audio id="mainAudio"></audio>
@@ -54,3 +196,4 @@
  
 
 <script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script></body>
+</html>
