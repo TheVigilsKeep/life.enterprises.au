@@ -58,6 +58,30 @@
             height: 100%; /* Fixes the parent height */
         }
 
+
+    /* === CUSTOM SCROLLBAR === */
+.grid-scroll-container {
+    flex: 1;          /* Takes up remaining vertical space */
+    height: 0;        /* IMPORTANT: Forces the container to use flex height, not content height */
+    overflow-y: scroll; /* Forces scrollbar visibility */
+    overflow-x: hidden;
+    padding-right: 5px;
+    margin-top: 10px;
+}
+
+/* Optional: Style the scrollbar to match your pink theme */
+.grid-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+.grid-scroll-container::-webkit-scrollbar-thumb {
+    background: var(--theme-color);
+    border-radius: 4px;
+}
+.grid-scroll-container::-webkit-scrollbar-track {
+    background: #222;
+}
+
+    
         /* === 4. RIGHT SIDE: PLAYER === */
         .player-side {
             flex: 1;
@@ -172,8 +196,20 @@ p#trackTitle {
     <div id="main-wrapper">
         <h1 style="font-size: 2rem;margin: 5px 0;]:center;justify-content: center;display: flex;text-align: center;font-size: 3rem;">Subject#05</h1>
 
-<div class="player-side">
-                
+<div class="grid-scroll-container">
+                    
+                <div class="player-side">
+
+
+
+
+
+
+
+
+
+
+    
                 <div class="track1">
                     
                     
@@ -294,8 +330,14 @@ p#trackTitle {
                     <span id="longevityDisplay">00|00|00</span>
                 </div></div></div>
                 
-                <div class="socials-box" id="socialsContent">Socials</div>
+                
             </div>
+
+
+
+
+
+<div class="socials-box" id="socialsContent">Socials</div></div>
         
 
         <div class="footer-nav">
@@ -309,10 +351,6 @@ p#trackTitle {
 
 
 
-
-
-
- 
 
 
 
