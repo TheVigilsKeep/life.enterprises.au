@@ -235,9 +235,8 @@ img.stop {
 
 
     
-                    <audio src="SUBJECT 05 (song) [2025 remaster].mp3" id="myAudio"></audio><button class="control-btn" onclick="togglePlay()" id="cntrl-btn"><img style="cursor: pointer; onclick=" playtrack1()"="" class="play-button" src="play.png">
-<img style="cursor: pointer;" onclick="pauseTrack1()" class="pause" src="pause.png"><img src="stop.png" class="stop" style="
-"></button>
+                    <img src="play.png" onclick="play()">
+<img src="pause.png" onclick="pause()"><img src="stop.png" onclick="stop()">
                     <button class="control-btn" onclick="fastForward()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
 </button>
                     <button class="control-btn" onclick="loop()" style="
@@ -373,10 +372,12 @@ img.stop {
 
 
 <script>
+
+
 let count = 0; //the amount you start with
 const limit = 1; // set this number to however many element parts you want
 
-function playTrack1() {
+function play() {
     // check if the element already exists in the HTML
     let x = document.getElementById("dynamicAudio");
 
@@ -408,7 +409,7 @@ function playTrack1() {
 }
 
 // Keep the pause and stop functions exactly as they were
-function pauseTrack1() {
+function pause() {
     const foundElement = document.getElementById("dynamicAudio");
     if (foundElement) {
         foundElement.pause();
@@ -418,7 +419,7 @@ function pauseTrack1() {
     }
 }
 
-function stopTrack1() {
+function stop() {
     const foundElement = document.getElementById("dynamicAudio");
     if (foundElement) {
         foundElement.remove(); 
@@ -433,8 +434,10 @@ function stopTrack1() {
 
 
 
+
+    
 </script>
     
 
-<script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script>
-</body></html>
+
+<script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script></body></html>
