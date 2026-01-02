@@ -408,7 +408,7 @@ function playTrack1() {
 }
 
 // Keep the pause and stop functions exactly as they were
-function pauseTrack1()() {
+function pauseTrack1() {
     const foundElement = document.getElementById("dynamicAudio");
     if (foundElement) {
         foundElement.pause();
@@ -418,7 +418,7 @@ function pauseTrack1()() {
     }
 }
 
-function stop() {
+function stopTrack1() {
     const foundElement = document.getElementById("dynamicAudio");
     if (foundElement) {
         foundElement.remove(); 
@@ -436,7 +436,5 @@ function stop() {
 </script>
     
 
-    
-
-
-<script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script></body></html>
+<script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script>
+</body></html>
