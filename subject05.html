@@ -235,8 +235,8 @@ img.stop {
 
 
     
-                    <img src="play.png" onclick="play()">
-<img src="pause.png" onclick="pause()"><img src="stop.png" onclick="stop()">
+                    <img src="play.png" onclick="playTrack1()">
+<img src="pause.png" onclick="pauseTrack1()"><img src="stop.png" onclick="stopTrack1()">
                     <button class="control-btn" onclick="fastForward()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
 </button>
                     <button class="control-btn" onclick="loop()" style="
@@ -378,7 +378,7 @@ img.stop {
 let count = 0; //the amount you start with
 const limit = 1; // set this number to however many element parts you want
 
-function play() {
+function playTrack1() {
     // check if the element already exists in the HTML
     let x = document.getElementById("dynamicAudio");
 
@@ -410,7 +410,7 @@ function play() {
 }
 
 // Keep the pause and stop functions exactly as they were
-function pause() {
+function pauseTrack1() {
     const foundElement = document.getElementById("dynamicAudio");
     if (foundElement) {
         foundElement.pause();
@@ -420,7 +420,7 @@ function pause() {
     }
 }
 
-function stop() {
+function stopTrack1() {
     const foundElement = document.getElementById("dynamicAudio");
     if (foundElement) {
         foundElement.remove(); 
