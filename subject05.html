@@ -259,10 +259,9 @@ img.stop {
                     
                         <p id="trackTitle">2. Charm Spell Enrapture</p>
                 <div class="control-bar">
-       
-                    <img class="control-btn" src="play.png" onclick="playTrack2()">
-<img class="control-btn" src="pause.png" onclick="pauseTrack2()"><img class="control-btn" src="stop.png" onclick="stopTrack2()">
-                    
+                    <button class="control-btn" onclick="togglePlay()" id="playBtn"><img src="play.png" class="play" style="
+">
+</button>
                     <button class="control-btn" onclick="fastForward()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
 </button>
                     <button class="control-btn" onclick="loop()" style="
@@ -283,10 +282,9 @@ img.stop {
                     
                         <p id="trackTitle">3. EminaCGI</p>
                 <div class="control-bar">
-    
-                    <img class="control-btn" src="play.png" onclick="playTrack3()">
-<img class="control-btn" src="pause.png" onclick="pauseTrack3()"><img class="control-btn" src="stop.png" onclick="stopTrack3()">
-                    
+                    <button class="control-btn" onclick="togglePlay()" id="playBtn"><img src="play.png" class="play" style="
+">
+</button>
                     <button class="control-btn" onclick="fastForward()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
 </button>
                     <button class="control-btn" onclick="loop()" style="
@@ -308,10 +306,9 @@ img.stop {
                     
                         <p id="trackTitle">4. Eva II - Fragrance Waterstream</p>
                 <div class="control-bar">
-    
-                    <img class="control-btn" src="play.png" onclick="playTrack4()">
-<img class="control-btn" src="pause.png" onclick="pauseTrack4()"><img class="control-btn" src="stop.png" onclick="stopTrack4()">
-                    
+                    <button class="control-btn" onclick="togglePlay()" id="playBtn"><img src="play.png" class="play" style="
+">
+</button>
                     <button class="control-btn" onclick="fastForward()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
 </button>
                     <button class="control-btn" onclick="loop()" style="
@@ -331,11 +328,9 @@ img.stop {
                     
                         <p id="trackTitle">5. The Beauty of Death</p>
                 <div class="control-bar">
-    
-                    <img class="control-btn" src="play.png" onclick="playTrack5()">
-<img class="control-btn" src="pause.png" onclick="pauseTrack5()"><img class="control-btn" src="stop.png" onclick="stopTrack5()">
-
-                    
+                    <button class="control-btn" onclick="togglePlay()" id="playBtn"><img src="play.png" class="play" style="
+">
+</button>
                     <button class="control-btn" onclick="fastForward()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
 </button>
                     <button class="control-btn" onclick="loop()" style="
@@ -383,12 +378,12 @@ const limit = 1; // set this number to however many element parts you want
 
 function playTrack1() {
     // check if the element already exists in the HTML
-    let x = document.getElementById("track1");
+    let x = document.getElementById("dynamicAudio");
 
     //  If it DOESN'T exist and we are under the limit, create it
     if (!x && count < limit) { //if the count is less than the element then the element will start again
         x = document.createElement("AUDIO"); // creates a new element
-        x.id = "track1"; // GIVES THE NEWLY MADE ELEMENT AN ID
+        x.id = "dynamicAudio"; // GIVES THE NEWLY MADE ELEMENT AN ID
         x.style.display = "none"; //hides the audio player
         
         // Set the source
@@ -414,7 +409,7 @@ function playTrack1() {
 
 // Keep the pause and stop functions exactly as they were
 function pauseTrack1() {
-    const foundElement = document.getElementById("track1");
+    const foundElement = document.getElementById("dynamicAudio");
     if (foundElement) {
         foundElement.pause();
     } else {
@@ -424,7 +419,7 @@ function pauseTrack1() {
 }
 
 function stopTrack1() {
-    const foundElement = document.getElementById("track1");
+    const foundElement = document.getElementById("dynamicAudio");
     if (foundElement) {
         foundElement.remove(); 
         count = 0;    //reset count
@@ -436,62 +431,7 @@ function stopTrack1() {
 
 
 
-// PLAY TRACK 2
-let count = 0; //the amount you start with
-const limit = 1; // set this number to however many element parts you want
 
-function playTrack2() {
-    // check if the element already exists in the HTML
-    let x = document.getElementById("track2");
-
-    //  If it DOESN'T exist and we are under the limit, create it
-    if (!x && count < limit) { //if the count is less than the element then the element will start again
-        x = document.createElement("AUDIO"); // creates a new element
-        x.id = "track2"; // GIVES THE NEWLY MADE ELEMENT AN ID
-        x.style.display = "none"; //hides the audio player
-        
-        // Set the source
-        if (x.canPlayType("audio/mpeg")) {
-            x.setAttribute("src", "Charm Spell Enrapture [2025 remaster].mp3");
-        } else {
-
-        }
-
-        x.setAttribute("controls", "controls");
-        document.body.appendChild(x);
-        count = 1; // Update count so we don't make another one
-    }
-
-    // If x exists (either we just made it, or it was already there) then play it
-    if (x) {
-        x.play();
-        // This will start the song the first time AND resume it if it was paused
-    } else {
-        console.log("no audio element found to play");
-    }
-}
-
-// Keep the pause and stop functions exactly as they were
-function pauseTrack2() {
-    const foundElement = document.getElementById("track2");
-    if (foundElement) {
-        foundElement.pause();
-    } else {
-        count = 0; //reset count
-        console.log("no audio element found to pause");
-    }
-}
-
-function stopTrack2() {
-    const foundElement = document.getElementById("track2");
-    if (foundElement) {
-        foundElement.remove(); 
-        count = 0;    //reset count
-    } else {
-        count = 0;    //reset count
-        console.log("No audio element found to remove.");
-    }
-}
 
     
 </script>
