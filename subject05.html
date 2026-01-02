@@ -145,6 +145,19 @@ p#trackTitle {
     position: relative;
 }
 
+img.pause {
+    bottom: -0.3rem
+;
+    position: relative;
+}
+
+img.stop {
+    bottom: -0.2rem;
+    position: relative;
+}
+
+
+
         /* === 5. MEDIA QUERIES (FIT LOGIC) === */
 
         /* TABLET (1023px) */
@@ -215,10 +228,16 @@ p#trackTitle {
                     
                     
                         <p id="trackTitle">1. Subject#05</p>
-                <div class="control-bar">
-                    <button class="control-btn" onclick="togglePlay()" id="playBtn"><img src="play.png" class="play" style="
-">
-</button>
+                
+
+
+<div class="control-bar">
+
+
+    
+                    <audio src="SUBJECT 05 (song) [2025 remaster].mp3" id="myAudio"></audio><button class="control-btn" onclick="togglePlay()" id="cntrl-btn"><img style="cursor: pointer; onclick=" playtrack1()"="" class="play-button" src="play.png">
+<img style="cursor: pointer;" onclick="pauseTrack1()" class="pause" src="pause.png"><img src="stop.png" class="stop" style="
+"></button>
                     <button class="control-btn" onclick="fastForward()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
 </button>
                     <button class="control-btn" onclick="loop()" style="
@@ -351,6 +370,73 @@ p#trackTitle {
 
 
 
+
+
+<script>
+let count = 0; //the amount you start with
+const limit = 1; // set this number to however many element parts you want
+
+function playTrack1() {
+    // check if the element already exists in the HTML
+    let x = document.getElementById("dynamicAudio");
+
+    //  If it DOESN'T exist and we are under the limit, create it
+    if (!x && count < limit) { //if the count is less than the element then the element will start again
+        x = document.createElement("AUDIO"); // creates a new element
+        x.id = "dynamicAudio"; // GIVES THE NEWLY MADE ELEMENT AN ID
+        x.style.display = "none"; //hides the audio player
+        
+        // Set the source
+        if (x.canPlayType("audio/mpeg")) {
+            x.setAttribute("src", "SUBJECT 05 (song) [2025 remaster].mp3");
+        } else {
+
+        }
+
+        x.setAttribute("controls", "controls");
+        document.body.appendChild(x);
+        count = 1; // Update count so we don't make another one
+    }
+
+    // If x exists (either we just made it, or it was already there) then play it
+    if (x) {
+        x.play();
+        // This will start the song the first time AND resume it if it was paused
+    } else {
+        console.log("no audio element found to play");
+    }
+}
+
+// Keep the pause and stop functions exactly as they were
+function pauseTrack1()() {
+    const foundElement = document.getElementById("dynamicAudio");
+    if (foundElement) {
+        foundElement.pause();
+    } else {
+        count = 0; //reset count
+        console.log("no audio element found to pause");
+    }
+}
+
+function stop() {
+    const foundElement = document.getElementById("dynamicAudio");
+    if (foundElement) {
+        foundElement.remove(); 
+        count = 0;    //reset count
+    } else {
+        count = 0;    //reset count
+        console.log("No audio element found to remove.");
+    }
+}
+
+
+
+
+
+</script>
+    
+
+    
 
 
 <script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script></body></html>
