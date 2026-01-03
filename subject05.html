@@ -454,29 +454,29 @@ function stopTrack1() {
 
 function playTrack2() {
     // check if the element already exists in the HTML
-    let y = document.getElementById("dynamicAudio2");
+    let track = document.getElementById("track2");
 
     //  If it DOESN'T exist and we are under the limit, create it
-    if (!y && count < limit) { //if the count is less than the element then the element will start again
-        y = document.createElement("AUDIO"); // creates a new element
-        y.id = "dynamicAudio2"; // GIVES THE NEWLY MADE ELEMENT AN ID
-        y.style.display = "none"; //hides the audio player
+    if (!track && count < limit) { //if the count is less than the element then the element will start again
+        track = document.createElement("AUDIO"); // creates a new element
+        track.id = "track2"; // GIVES THE NEWLY MADE ELEMENT AN ID
+        track.style.display = "none"; //hides the audio player
         
         // Set the source
-        if (y.canPlayType("audio/mpeg")) {
-            y.setAttribute("src", "Charm Spell Enrapture [2025 remaster].mp3");
+        if (track.canPlayType("audio/mpeg")) {
+            track.setAttribute("src", "Charm Spell Enrapture [2025 remaster].mp3");
         } else {
 
         }
 
         y.setAttribute("controls", "controls");
-        document.body.appendChild(y);
+        document.body.appendChild(track);
         count = 1; // Update count so we don't make another one
     }
 
     // If y exists (either we just made it, or it was already there) then play it
-    if (y) {
-        y.play();
+    if (track) {
+        track.play();
         // This will start the song the first time AND resume it if it was paused
     } else {
         console.log("no audio element found to play");
@@ -485,7 +485,7 @@ function playTrack2() {
 
 // Keep the pause and stop functions exactly as they were
 function pauseTrack2() {
-    const foundElement = document.getElementById("dynamicAudio2");
+    const foundElement = document.getElementById("track2");
     if (foundElement) {
         foundElement.pause();
     } else {
@@ -495,7 +495,7 @@ function pauseTrack2() {
 }
 
 function stopTrack2() {
-    const foundElement = document.getElementById("dynamicAudio2");
+    const foundElement = document.getElementById("track2");
     if (foundElement) {
         foundElement.remove(); 
         count = 0;    //reset count
