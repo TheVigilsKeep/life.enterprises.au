@@ -390,12 +390,12 @@ const limit = 1; // set this number to however many element parts you want
 
 function playTrack1() {
     // check if the element already exists in the HTML
-    let x = document.getElementById("dynamicAudio");
+    let x = document.getElementById("track1");
 
     //  If it DOESN'T exist and we are under the limit, create it
     if (!x && count < limit) { //if the count is less than the element then the element will start again
         x = document.createElement("AUDIO"); // creates a new element
-        x.id = "dynamicAudio"; // GIVES THE NEWLY MADE ELEMENT AN ID
+        x.id = "track1"; // GIVES THE NEWLY MADE ELEMENT AN ID
         x.style.display = "none"; //hides the audio player
         
         // Set the source
@@ -421,7 +421,7 @@ function playTrack1() {
 
 // Keep the pause and stop functions exactly as they were
 function pauseTrack1() {
-    const foundElement = document.getElementById("dynamicAudio");
+    const foundElement = document.getElementById("track1");
     if (foundElement) {
         foundElement.pause();
     } else {
@@ -431,7 +431,7 @@ function pauseTrack1() {
 }
 
 function stopTrack1() {
-    const foundElement = document.getElementById("dynamicAudio");
+    const foundElement = document.getElementById("track1");
     if (foundElement) {
         foundElement.remove(); 
         count = 0;    //reset count
