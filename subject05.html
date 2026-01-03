@@ -345,7 +345,7 @@ img.stop {
 "> 
     </button>
 
-    <a class="control-btn" href="Eva II - Fragrance Waterstream [2025 remaster].mp3" download=""><img src="download.png" class="download" style="
+    <a class="control-btn" href="The Beauty of Death [2025 remaster].mp3" download=""><img src="download.png" class="download" style="
     ]: 280%;
 "></a>
                     <span id="longevityDisplay">00|00|00</span>
@@ -504,12 +504,182 @@ function stopTrack2() {
 
 
 
+// TRACK 3
+let count3 = 0; //the amount you start with
+const limit3 = 1; // set this number to however many element parts you want
+    
+function playTrack3() {
+    // check if the element already exists in the HTML
+    let track = document.getElementById("track3");
+
+    //  If it DOESN'T exist and we are under the limit, create it
+    if (!track && count3 < limit3) { //if the count is less than the element then the element will start again
+        track = document.createElement("AUDIO"); // creates a new element
+        track.id = "track3"; // GIVES THE NEWLY MADE ELEMENT AN ID
+        track.style.display = "none"; //hides the audio player
+        
+        // Set the source
+        if (track.canPlayType("audio/mpeg")) {
+            track.setAttribute("src", "EminaCGI [2025 remaster].mp3");
+        } else {
+
+        }
+
+        track.setAttribute("controls", "controls");
+        document.body.appendChild(track);
+        count3 = 1; // Update count so we don't make another one
+    }
+
+    // If x exists (either we just made it, or it was already there) then play it
+    if (track) {
+        track.play();
+        // This will start the song the first time AND resume it if it was paused
+    } else {
+        console.log("no audio element found to play");
+    }
+}
+
+// Keep the pause and stop functions exactly as they were
+function pauseTrack3() {
+    const foundElement = document.getElementById("track3");
+    if (foundElement) {
+        foundElement.pause();
+    } else {
+        count3 = 0; //reset count
+        console.log("track 3 isn't playing.");
+    }
+}
+
+function stopTrack3() {
+    const foundElement = document.getElementById("track3");
+    if (foundElement) {
+        foundElement.remove(); 
+        count3 = 0;    //reset count
+    } else {
+        count3 = 0;    //reset count
+        console.log("track 3 isn't playing.");
+    }
+}
+
+
+    
+
+// TRACK 4
+let count4 = 0; //the amount you start with
+const limit4 = 1; // set this number to however many element parts you want
+    
+function playTrack4() {
+    // check if the element already exists in the HTML
+    let track = document.getElementById("track4");
+
+    //  If it DOESN'T exist and we are under the limit, create it
+    if (!track && count4 < limit4) { //if the count is less than the element then the element will start again
+        track = document.createElement("AUDIO"); // creates a new element
+        track.id = "track4"; // GIVES THE NEWLY MADE ELEMENT AN ID
+        track.style.display = "none"; //hides the audio player
+        
+        // Set the source
+        if (track.canPlayType("audio/mpeg")) {
+            track.setAttribute("src", "Eva II - Fragrance Waterstream [2025 remaster].mp3");
+        } else {
+
+        }
+
+        track.setAttribute("controls", "controls");
+        document.body.appendChild(track);
+        count4 = 1; // Update count so we don't make another one
+    }
+
+    // If x exists (either we just made it, or it was already there) then play it
+    if (track) {
+        track.play();
+        // This will start the song the first time AND resume it if it was paused
+    } else {
+        console.log("no audio element found to play");
+    }
+}
+
+// Keep the pause and stop functions exactly as they were
+function pauseTrack4() {
+    const foundElement = document.getElementById("track4");
+    if (foundElement) {
+        foundElement.pause();
+    } else {
+        count4 = 0; //reset count
+        console.log("track 4 isn't playing.");
+    }
+}
+
+function stopTrack4() {
+    const foundElement = document.getElementById("track4");
+    if (foundElement) {
+        foundElement.remove(); 
+        count4 = 0;    //reset count
+    } else {
+        count4 = 0;    //reset count
+        console.log("track 4 isn't playing.");
+    }
+}
 
 
 
 
+// TRACK 5
+let count5 = 0; //the amount you start with
+const limit5 = 1; // set this number to however many element parts you want
+    
+function playTrack5() {
+    // check if the element already exists in the HTML
+    let track = document.getElementById("track5");
 
+    //  If it DOESN'T exist and we are under the limit, create it
+    if (!track && count5 < limit5) { //if the count is less than the element then the element will start again
+        track = document.createElement("AUDIO"); // creates a new element
+        track.id = "track5"; // GIVES THE NEWLY MADE ELEMENT AN ID
+        track.style.display = "none"; //hides the audio player
+        
+        // Set the source
+        if (track.canPlayType("audio/mpeg")) {
+            track.setAttribute("src", "The Beauty of Death [2025 remaster].mp3");
+        } else {
 
+        }
+
+        track.setAttribute("controls", "controls");
+        document.body.appendChild(track);
+        count5 = 1; // Update count so we don't make another one
+    }
+
+    // If x exists (either we just made it, or it was already there) then play it
+    if (track) {
+        track.play();
+        // This will start the song the first time AND resume it if it was paused
+    } else {
+        console.log("no audio element found to play");
+    }
+}
+
+// Keep the pause and stop functions exactly as they were
+function pauseTrack5() {
+    const foundElement = document.getElementById("track5");
+    if (foundElement) {
+        foundElement.pause();
+    } else {
+        count5 = 0; //reset count
+        console.log("track 5 isn't playing.");
+    }
+}
+
+function stopTrack5() {
+    const foundElement = document.getElementById("track5");
+    if (foundElement) {
+        foundElement.remove(); 
+        count5 = 0;    //reset count
+    } else {
+        count5 = 0;    //reset count
+        console.log("track 5 isn't playing.");
+    }
+}
     
 </script>
 
