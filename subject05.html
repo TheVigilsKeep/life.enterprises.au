@@ -444,13 +444,9 @@ function stopTrack1() {
 
 
 
-
-    
-
-
-
 // PLAY TRACK 2
-
+let count = 0; //the amount you start with
+const limit = 1; // set this number to however many element parts you want
 
 function playTrack2() {
     // check if the element already exists in the HTML
@@ -459,7 +455,7 @@ function playTrack2() {
     //  If it DOESN'T exist and we are under the limit, create it
     if (!track && count < limit) { //if the count is less than the element then the element will start again
         track = document.createElement("AUDIO"); // creates a new element
-        track.id = "track2"; // GIVES THE NEWLY MADE ELEMENT AN ID
+        track.id = "track1"; // GIVES THE NEWLY MADE ELEMENT AN ID
         track.style.display = "none"; //hides the audio player
         
         // Set the source
@@ -469,12 +465,12 @@ function playTrack2() {
 
         }
 
-        y.setAttribute("controls", "controls");
+        track.setAttribute("controls", "controls");
         document.body.appendChild(track);
         count = 1; // Update count so we don't make another one
     }
 
-    // If y exists (either we just made it, or it was already there) then play it
+    // If x exists (either we just made it, or it was already there) then play it
     if (track) {
         track.play();
         // This will start the song the first time AND resume it if it was paused
@@ -484,7 +480,7 @@ function playTrack2() {
 }
 
 // Keep the pause and stop functions exactly as they were
-function pauseTrack2() {
+function pauseTrack1() {
     const foundElement = document.getElementById("track2");
     if (foundElement) {
         foundElement.pause();
@@ -494,7 +490,7 @@ function pauseTrack2() {
     }
 }
 
-function stopTrack2() {
+function stopTrack1() {
     const foundElement = document.getElementById("track2");
     if (foundElement) {
         foundElement.remove(); 
@@ -504,6 +500,11 @@ function stopTrack2() {
         console.log("No audio element found to remove.");
     }
 }
+    
+
+
+
+
 
 
 
