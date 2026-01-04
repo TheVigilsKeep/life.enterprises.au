@@ -1,14 +1,8 @@
 <html lang="en"><head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MUSIC_LIBRARY</title>
-
-        
-<style>
-
-
-
+    <style>
         /* === 1. CORE STYLES & VARIABLES === */
         :root {
             --theme-color: #fd77fe;
@@ -55,11 +49,43 @@
             display: flex;
             flex-direction: column;
             min-width: 0;
-            height: 100%; /* Fixes the parent height */
+            height: 185%; /* Fixes the parent height */
         }
 
+        .search-container { border: var(--chalk-border); padding: 5px; margin-bottom: 5px; }
+        .search-bar { width: 100%; background: transparent; border: none; color: var(--theme-color); font-size: 1rem; outline: none; }
+        
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            flex: 1;
+        }
 
-    /* === CUSTOM SCROLLBAR === */
+        .art-box {
+            border: var(--chalk-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.7rem;
+            padding: 2px;
+            width: 90%;
+            aspect-ratio: 1 / 1; /* Ensures boxes stay square while scrolling */
+        }
+
+/*ALBUMS*/
+.album1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* === CUSTOM SCROLLBAR === */
 .grid-scroll-container {
     flex: 1;          /* Takes up remaining vertical space */
     height: 0;        /* IMPORTANT: Forces the container to use flex height, not content height */
@@ -67,7 +93,6 @@
     overflow-x: hidden;
     padding-right: 5px;
     margin-top: 10px;
-    width: 103%;
 }
 
 /* Optional: Style the scrollbar to match your pink theme */
@@ -82,27 +107,23 @@
     background: #222;
 }
 
-    
+
+
+
         /* === 4. RIGHT SIDE: PLAYER === */
         .player-side {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center;
             min-width: 0;
         }
 
 
 
-p#trackTitle {
-    display: flex;
-    align-items: center;
-    font-size: 1.7rem;
-}
-        
-
         .control-bar {
-            width: 65%;
+            width: 100%;
             border: var(--chalk-border);
             border-radius: 50px;
             padding: 8px;
@@ -114,7 +135,14 @@ p#trackTitle {
 
         .control-btn { background: none; border: none; color: var(--theme-color); cursor: pointer; padding: 0; filter: hue-rotate(25deg);}
 
-
+        .metadata-container {
+            width: 100%;
+            position: relative;
+            padding: 10px;
+            height: 90px;
+            font-size: 0.7rem;
+            box-sizing: border-box;
+        }
 
         /* Corner Brackets */
         .metadata-container::before, .metadata-container::after {
@@ -123,8 +151,9 @@ p#trackTitle {
         .metadata-container::before { top: -3px; left: -3px; border-right: 0; border-bottom: 0; }
         .metadata-container::after { bottom: -3px; right: -3px; border-left: 0; border-top: 0; }
 
-        .socials-box {display: flex;border: var(--chalk-border);width: 90%;padding: 8px;text-align: center;font-size: 1.7rem;bottom: -1rem;position: relative;height: 5rem;justify-content: center;}
+        .socials-box { border: var(--chalk-border); width: 100%; padding: 8px; text-align: center; font-size: 0.7rem; position: relative; bottom: -90%;}
 
+        
 
 .exit {
     font-size: 8vw;
@@ -136,27 +165,7 @@ p#trackTitle {
     color: var(--theme);
 }
         
-.footer-nav {
-    padding: 10px 0;
-    font-size: 0.8rem;
-    text-align: left;
-    display: table;
-    left: -100px;
-    position: relative;
-}
-
-img.pause {
-    bottom: -0.3rem
-;
-    position: relative;
-}
-
-img.stop {
-    bottom: -0.2rem;
-    position: relative;
-}
-
-
+        .footer-nav { text-align: center; padding: 10px 0; flex-shrink: 0; font-size: 0.8rem; }
 
         /* === 5. MEDIA QUERIES (FIT LOGIC) === */
 
@@ -169,12 +178,8 @@ img.stop {
         /* MOBILE (599px) */
         @media screen and (max-width: 599px) {
             .container { gap: 10px; }
-            .control-bar { font-size: 1rem; }
-            #main-wrapper {         transform: scale(0.5);
-        transform-origin: right;
-        height: 70rem;
-        top: -50vh;
-        position: fixed; }
+            .art-box { font-size: 0.6rem; }
+            #main-wrapper { transform: scale(0.9); transform-origin: center; }
         }
 
         /* EXTRA SMALL (240px) */
@@ -187,190 +192,49 @@ img.stop {
             }
             .container { gap: 5px; }
             .control-bar { padding: 4px; }
-        
-
-    
-
-
-    
-</style>
-
-    
+        }
+    </style>
 </head>
-
-
-
-
 <body inmaintabuse="1">
 
     <audio id="mainAudio"></audio>
 
     <div id="main-wrapper">
-        <h1 style="font-size: 2rem;margin: 5px 0;]:center;justify-content: center;display: flex;text-align: center;font-size: 3rem;">Subject#05</h1>
+        <div class="container">
+            <div class="library-side">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-bar" placeholder="Search bar">
+                </div>
+                <h1 style="font-size: 2rem;margin: 5px 0;">Music Library</h1>
+
 
 <div class="grid-scroll-container">
                     
-                <div class="player-side">
-
-
-
-
-
-
-
-
-
 
     
-                <div class="track1">
-                        <p id="trackTitle">1. Subject#05</p>
-                
+                <div class="music-grid" id="musicGrid">
+                    <a class="art-box" id="album1" href="subject05.html">
 
-
-<div class="control-bar">
-
-
+<img src="Subject05" class="album1">
     
-                    <img class="control-btn" src="play.png" onclick="playTrack1()">
-<img class="control-btn" src="pause.png" onclick="pauseTrack1()"><img class="control-btn" src="stop.png" onclick="stopTrack1()">
-                    <button class="control-btn" onclick="fastForward1()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
-</button>
-                    <button class="control-btn" onclick="loop1()" style="
-" id="loop-btn">
-        <img src="loop.png" class="loop" style="
-"> 
-    </button>
-
-    <a class="control-btn" href="SUBJECT 05 (song) [2025 remaster].mp3" download=""><img src="download.png" class="download" style="
-    ]: 280%;
-"></a>
+</a><a class="art-box" id="album2" href="PubescentMoodSwings.html"></a><div class="art-box" id="album3"></div><div class="art-box" id="album4"></div><div class="art-box" id="album5"></div>
+                    <div class="art-box" id="album6"></div><div class="art-box" id="album7"></div><div class="art-box" id="album8"></div><div class="art-box" id="album9&gt;&lt;/div&gt;&lt;div class=" art-box=""></div><div class="art-box" id="album11"></div><div class="art-box" id="album12"></div><div class="art-box" id="album13"></div><div class="art-box" id="album14"></div><div class="art-box" id="album15"></div><div class="art-box" id="album16"></div><div class="art-box" id="album17"></div><div class="art-box" id="album18"></div><div class="art-box" id="album19"></div><div class="art-box" id="album20"></div><div class="art-box" id="album21"></div><div class="art-box" id="album22"></div><div class="art-box" id="album23"></div><div class="art-box" id="album24"></div><div class="art-box" id="album25"></div></div>
                     
                 </div></div>
-
-
-
-                    
-                    <div class="track2"> 
-                        <p id="trackTitle">2. Charm Spell Enrapture</p>
-
-<div class="control-bar">
-
-
-    
-                    <img class="control-btn" src="play.png" onclick="playTrack2()">
-<img class="control-btn" src="pause.png" onclick="pauseTrack2()"><img class="control-btn" src="stop.png" onclick="stopTrack2()">
-                    <button class="control-btn" onclick="fastForward2()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
-</button>
-                    <button class="control-btn" onclick="loop2()" style="
-" id="loop-btn">
-        <img src="loop.png" class="loop" style="
-"> 
-    </button>
-
-    <a class="control-btn" href="Charm Spell Enrapture [2025 remaster].mp3" download=""><img src="download.png" class="download" style="
-    ]: 280%;
-"></a>
-                    
-                </div></div>
-                    
-                
-                    <div class="track3"> 
-                        <p id="trackTitle">3. EminaCGI</p>
-
-<div class="control-bar">
-
-
-    
-                    <img class="control-btn" src="play.png" onclick="playTrack3()">
-<img class="control-btn" src="pause.png" onclick="pauseTrack3()"><img class="control-btn" src="stop.png" onclick="stopTrack3()">
-                    <button class="control-btn" onclick="fastForward3()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
-</button>
-                    <button class="control-btn" onclick="loop3()" style="
-" id="loop-btn">
-        <img src="loop.png" class="loop" style="
-"> 
-    </button>
-
-    <a class="control-btn" href="EminaCGI [2025 remaster].mp3" download=""><img src="download.png" class="download" style="
-    ]: 280%;
-"></a>
-                    
-                </div></div>
-                    
-                    
-
-                    
-                    
-                                        <div class="track4"> 
-                        <p id="trackTitle">4. Eva II - Fragrance Waterstream</p>
-
-<div class="control-bar">
-
-
-    
-                    <img class="control-btn" src="play.png" onclick="playTrack4()">
-<img class="control-btn" src="pause.png" onclick="pauseTrack4()"><img class="control-btn" src="stop.png" onclick="stopTrack4()">
-                    <button class="control-btn" onclick="fastForward4()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
-</button>
-                    <button class="control-btn" onclick="loop4()" style="
-" id="loop-btn">
-        <img src="loop.png" class="loop" style="
-"> 
-    </button>
-
-    <a class="control-btn" href="Eva II - Fragrance Waterstream [2025 remaster].mp3" download=""><img src="download.png" class="download" style="
-    ]: 280%;
-"></a>
-                    
-                </div></div>
-                    
-                    
-
-
-
-                                                            <div class="track5"> 
-                        <p id="trackTitle">5. The Beauty of Death</p>
-
-<div class="control-bar">
-
-
-    
-                    <img class="control-btn" src="play.png" onclick="playTrack5()">
-<img class="control-btn" src="pause.png" onclick="pauseTrack5()"><img class="control-btn" src="stop.png" onclick="stopTrack5()">
-                    <button class="control-btn" onclick="fastForward5()" id="fastforwardBtn"><img src="fastforward.png" class="fastforward"> 
-</button>
-                    <button class="control-btn" onclick="loop5()" style="
-" id="loop-btn">
-        <img src="loop.png" class="loop" style="
-"> 
-    </button>
-
-    <a class="control-btn" href="The Beauty of Death [2025 remaster].mp3" download=""><img src="download.png" class="download" style="
-    ]: 280%;
-"></a>
-                    
-                </div></div>
-                    
-                    
-                    
-
-
-                    </div>
-                
-                
             </div>
 
-
-
-
-
-<div class="socials-box" id="socialsContent">Socials</div></div>
-        
+            <div class="player-side">
+                
+                
+                
+                <div class="socials-box" id="socialsContent">Socials</div>
+            </div>
+        </div>
 
         <div class="footer-nav">
-            Return to Main Menu <br><a href="music library.html"><div class="exit">
+            Return to Main Menu <br><a href="art_museum.html"><div class="exit">
 
-    ^
+    &gt;
 
 </div></a></div>
 
@@ -381,309 +245,7 @@ img.stop {
 
 
 
-<script>
-
-
-// TRACK 1
-let count = 0; //the amount you start with
-const limit = 1; // set this number to however many element parts you want
-
-function playTrack1() {
-    // check if the element already exists in the HTML
-    let track = document.getElementById("track1");
-
-    //  If it DOESN'T exist and we are under the limit, create it
-    if (!track && count < limit) { //if the count is less than the element then the element will start again
-        track = document.createElement("AUDIO"); // creates a new element
-        track.id = "track1"; // GIVES THE NEWLY MADE ELEMENT AN ID
-        track.style.display = "none"; //hides the audio player
-        
-        // Set the source
-        if (track.canPlayType("audio/mpeg")) {
-            track.setAttribute("src", "SUBJECT 05 (song) [2025 remaster].mp3");
-        } else {
-
-        }
-
-        track.setAttribute("controls", "controls");
-        document.body.appendChild(track);
-        count = 1; // Update count so we don't make another one
-    }
-
-    // If x exists (either we just made it, or it was already there) then play it
-    if (track) {
-        track.play();
-        // This will start the song the first time AND resume it if it was paused
-    } else {
-        console.log("no audio element found to play");
-    }
-}
-
-// Keep the pause and stop functions exactly as they were
-function pauseTrack1() {
-    const foundElement = document.getElementById("track1");
-    if (foundElement) {
-        foundElement.pause();
-    } else {
-        count = 0; //reset count
-        console.log("track 1 isn't playing.");
-    }
-}
-
-function stopTrack1() {
-    const foundElement = document.getElementById("track1");
-    if (foundElement) {
-        foundElement.remove(); 
-        count = 0;    //reset count
-    } else {
-        count = 0;    //reset count
-        console.log("track 1 isn't playing.");
-    }
-}
-
-
-
-
-// TRACK 2
-let count2 = 0; //the amount you start with
-const limit2 = 1; // set this number to however many element parts you want
-    
-function playTrack2() {
-    // check if the element already exists in the HTML
-    let track = document.getElementById("track2");
-
-    //  If it DOESN'T exist and we are under the limit, create it
-    if (!track && count2 < limit2) { //if the count is less than the element then the element will start again
-        track = document.createElement("AUDIO"); // creates a new element
-        track.id = "track2"; // GIVES THE NEWLY MADE ELEMENT AN ID
-        track.style.display = "none"; //hides the audio player
-        
-        // Set the source
-        if (track.canPlayType("audio/mpeg")) {
-            track.setAttribute("src", "Charm Spell Enrapture [2025 remaster].mp3");
-        } else {
-
-        }
-
-        track.setAttribute("controls", "controls");
-        document.body.appendChild(track);
-        count2 = 1; // Update count so we don't make another one
-    }
-
-    // If x exists (either we just made it, or it was already there) then play it
-    if (track) {
-        track.play();
-        // This will start the song the first time AND resume it if it was paused
-    } else {
-        console.log("no audio element found to play");
-    }
-}
-
-// Keep the pause and stop functions exactly as they were
-function pauseTrack2() {
-    const foundElement = document.getElementById("track2");
-    if (foundElement) {
-        foundElement.pause();
-    } else {
-        count2 = 0; //reset count
-        console.log("track 2 isn't playing.");
-    }
-}
-
-function stopTrack2() {
-    const foundElement = document.getElementById("track2");
-    if (foundElement) {
-        foundElement.remove(); 
-        count2 = 0;    //reset count
-    } else {
-        count2 = 0;    //reset count
-        console.log("track 2 isn't playing.");
-    }
-}
-    
-
-
-
-// TRACK 3
-let count3 = 0; //the amount you start with
-const limit3 = 1; // set this number to however many element parts you want
-    
-function playTrack3() {
-    // check if the element already exists in the HTML
-    let track = document.getElementById("track3");
-
-    //  If it DOESN'T exist and we are under the limit, create it
-    if (!track && count3 < limit3) { //if the count is less than the element then the element will start again
-        track = document.createElement("AUDIO"); // creates a new element
-        track.id = "track3"; // GIVES THE NEWLY MADE ELEMENT AN ID
-        track.style.display = "none"; //hides the audio player
-        
-        // Set the source
-        if (track.canPlayType("audio/mpeg")) {
-            track.setAttribute("src", "EminaCGI [2025 remaster].mp3");
-        } else {
-
-        }
-
-        track.setAttribute("controls", "controls");
-        document.body.appendChild(track);
-        count3 = 1; // Update count so we don't make another one
-    }
-
-    // If x exists (either we just made it, or it was already there) then play it
-    if (track) {
-        track.play();
-        // This will start the song the first time AND resume it if it was paused
-    } else {
-        console.log("no audio element found to play");
-    }
-}
-
-// Keep the pause and stop functions exactly as they were
-function pauseTrack3() {
-    const foundElement = document.getElementById("track3");
-    if (foundElement) {
-        foundElement.pause();
-    } else {
-        count3 = 0; //reset count
-        console.log("track 3 isn't playing.");
-    }
-}
-
-function stopTrack3() {
-    const foundElement = document.getElementById("track3");
-    if (foundElement) {
-        foundElement.remove(); 
-        count3 = 0;    //reset count
-    } else {
-        count3 = 0;    //reset count
-        console.log("track 3 isn't playing.");
-    }
-}
-
-
-    
-
-// TRACK 4
-let count4 = 0; //the amount you start with
-const limit4 = 1; // set this number to however many element parts you want
-    
-function playTrack4() {
-    // check if the element already exists in the HTML
-    let track = document.getElementById("track4");
-
-    //  If it DOESN'T exist and we are under the limit, create it
-    if (!track && count4 < limit4) { //if the count is less than the element then the element will start again
-        track = document.createElement("AUDIO"); // creates a new element
-        track.id = "track4"; // GIVES THE NEWLY MADE ELEMENT AN ID
-        track.style.display = "none"; //hides the audio player
-        
-        // Set the source
-        if (track.canPlayType("audio/mpeg")) {
-            track.setAttribute("src", "Eva II - Fragrance Waterstream [2025 remaster].mp3");
-        } else {
-
-        }
-
-        track.setAttribute("controls", "controls");
-        document.body.appendChild(track);
-        count4 = 1; // Update count so we don't make another one
-    }
-
-    // If x exists (either we just made it, or it was already there) then play it
-    if (track) {
-        track.play();
-        // This will start the song the first time AND resume it if it was paused
-    } else {
-        console.log("no audio element found to play");
-    }
-}
-
-// Keep the pause and stop functions exactly as they were
-function pauseTrack4() {
-    const foundElement = document.getElementById("track4");
-    if (foundElement) {
-        foundElement.pause();
-    } else {
-        count4 = 0; //reset count
-        console.log("track 4 isn't playing.");
-    }
-}
-
-function stopTrack4() {
-    const foundElement = document.getElementById("track4");
-    if (foundElement) {
-        foundElement.remove(); 
-        count4 = 0;    //reset count
-    } else {
-        count4 = 0;    //reset count
-        console.log("track 4 isn't playing.");
-    }
-}
-
-
-
-
-// TRACK 5
-let count5 = 0; //the amount you start with
-const limit5 = 1; // set this number to however many element parts you want
-    
-function playTrack5() {
-    // check if the element already exists in the HTML
-    let track = document.getElementById("track5");
-
-    //  If it DOESN'T exist and we are under the limit, create it
-    if (!track && count5 < limit5) { //if the count is less than the element then the element will start again
-        track = document.createElement("AUDIO"); // creates a new element
-        track.id = "track5"; // GIVES THE NEWLY MADE ELEMENT AN ID
-        track.style.display = "none"; //hides the audio player
-        
-        // Set the source
-        if (track.canPlayType("audio/mpeg")) {
-            track.setAttribute("src", "The Beauty of Death [2025 remaster].mp3");
-        } else {
-
-        }
-
-        track.setAttribute("controls", "controls");
-        document.body.appendChild(track);
-        count5 = 1; // Update count so we don't make another one
-    }
-
-    // If x exists (either we just made it, or it was already there) then play it
-    if (track) {
-        track.play();
-        // This will start the song the first time AND resume it if it was paused
-    } else {
-        console.log("no audio element found to play");
-    }
-}
-
-// Keep the pause and stop functions exactly as they were
-function pauseTrack5() {
-    const foundElement = document.getElementById("track5");
-    if (foundElement) {
-        foundElement.pause();
-    } else {
-        count5 = 0; //reset count
-        console.log("track 5 isn't playing.");
-    }
-}
-
-function stopTrack5() {
-    const foundElement = document.getElementById("track5");
-    if (foundElement) {
-        foundElement.remove(); 
-        count5 = 0;    //reset count
-    } else {
-        count5 = 0;    //reset count
-        console.log("track 5 isn't playing.");
-    }
-}
-    
-</script>
-
+ 
 
 <script src="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://okkffdhbfplmbjblhgapnchjinanmnij/"></script>
-
 </body></html>
